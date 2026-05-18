@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Will Turner — Keynote Speaker, Coach &amp; Advisor | willturner.au</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Book Will Turner as keynote speaker, executive coach, or trusted advisor. Award-winning author. Brisbane, Australia. Working nationally and internationally.">
+<link rel="canonical" href="https://willturner.au/contact">
+<meta property="og:title" content="Work with Will Turner — Simplexity">
+<meta property="og:description" content="Enquire about booking Will Turner as a keynote speaker, executive coach, or trusted advisor. Based in Brisbane. Working with leaders worldwide.">
+<meta property="og:url" content="https://willturner.au/contact">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://willturner.au/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Will Turner — Simplexity">
+<meta property="og:locale" content="en_AU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Work with Will Turner — Simplexity">
+<meta name="twitter:description" content="Enquire about booking Will Turner as a keynote speaker, executive coach, or trusted advisor. Based in Brisbane. Working with leaders worldwide.">
+<meta name="twitter:image" content="https://willturner.au/og-image.jpg">
+<meta name="twitter:site" content="@willturner_au">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="theme-color" content="#0e0d0c">
+<link rel="alternate" hreflang="en-AU" href="https://willturner.au/contact">
+<link rel="alternate" hreflang="en" href="https://willturner.au/contact">
+<meta name="geo.region" content="AU-QLD">
+<meta name="geo.placename" content="Brisbane, Queensland, Australia">
+<meta name="author" content="Will Turner">
+<meta name="keywords" content="book Will Turner, contact Will Turner, Will Turner enquiry, keynote speaker Brisbane contact, executive coach Brisbane enquiry">
+<link rel="preload" href="fonts/dm-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/dm-sans-300.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/dm-sans-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/playfair-display-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/playfair-display-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/playfair-display-400italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+<style>
+.contact-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 70vh;
+}
+.contact-left {
+  padding: 5rem 4rem;
+  border-right: 0.5px solid var(--cream-10);
+}
+.contact-right {
+  padding: 5rem 4rem;
+  background: var(--shadow);
+}
+
+/* ===== OFFER PILLS ===== */
+.offer-pill {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 2px;
+  border: 0.5px solid var(--cream-10);
+  color: var(--cream-40);
+  margin: 4px 4px 4px 0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.offer-pill:hover,
+.offer-pill.selected {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(201,169,110,0.08);
+}
+
+/* ===== FORM ===== */
+.form-group { margin-bottom: 1.5rem; }
+.form-label {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--cream-40);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.form-input {
+  width: 100%;
+  background: rgba(240,237,230,0.04);
+  border: 0.5px solid var(--cream-20);
+  border-radius: 2px;
+  padding: 0.85rem 1rem;
+  color: var(--cream);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.form-input:focus { border-color: var(--gold); }
+.form-input::placeholder { color: var(--cream-20); }
+textarea.form-input { resize: vertical; min-height: 120px; }
+
+/* ===== DETAIL ROWS ===== */
+.detail-row {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 0.5px solid var(--cream-10);
+  align-items: flex-start;
+}
+.detail-label {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  min-width: 90px;
+  padding-top: 2px;
+  flex-shrink: 0;
+}
+.detail-val {
+  font-size: 16px;
+  color: var(--cream-60);
+  line-height: 1.6;
+}
+
+/* ===== CALENDLY BOOKING CARDS ===== */
+.calendly-section {
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  border-top: 0.5px solid var(--cream-10);
+}
+.calendly-section-label {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+}
+.calendly-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Primary card — Start the Conversation */
+.calendly-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 1.25rem 1.5rem;
+  border: 0.5px solid var(--cream-10);
+  border-radius: 3px;
+  background: var(--ink);
+  text-decoration: none;
+  transition: border-color 0.25s, background 0.25s;
+  cursor: pointer;
+}
+.calendly-card:hover {
+  border-color: rgba(201,169,110,0.4);
+  background: rgba(201,169,110,0.03);
+}
+.calendly-card.primary {
+  border-color: rgba(201,169,110,0.35);
+  background: rgba(201,169,110,0.05);
+}
+.calendly-card.primary:hover {
+  border-color: var(--gold);
+  background: rgba(201,169,110,0.09);
+}
+.calendly-card-text {}
+.calendly-card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 0.2rem;
+  line-height: 1.2;
+}
+.calendly-card.primary .calendly-card-title {
+  color: var(--cream);
+}
+.calendly-card-desc {
+  font-size: 13px;
+  color: var(--cream-40);
+  line-height: 1.55;
+}
+.calendly-card-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+.calendly-card-duration {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.7;
+}
+.calendly-card-arrow {
+  font-size: 16px;
+  color: var(--cream-20);
+  transition: color 0.2s, transform 0.2s;
+}
+.calendly-card:hover .calendly-card-arrow {
+  color: var(--gold);
+  transform: translate(2px, -2px);
+}
+.calendly-card.primary .calendly-card-arrow {
+  color: rgba(201,169,110,0.5);
+}
+.calendly-card.primary:hover .calendly-card-arrow {
+  color: var(--gold);
+}
+
+/* ===== WHAT HAPPENS NEXT ===== */
+.next-section {
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 0.5px solid var(--cream-10);
+}
+
+/* ===== MOBILE NAV — handled by style.css ===== */
+@media(max-width:960px) {
+  .contact-wrap { display: block; min-height: auto; }
+  .contact-left { padding: 3rem 1.5rem; border-right: none; border-bottom: 0.5px solid var(--cream-10); }
+  .contact-right { padding: 3rem 1.5rem; }
+  .calendly-section { margin-top: 2rem; padding-top: 2rem; }
+}
+@media(max-width:560px) {
+  .calendly-card { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+  .calendly-card-meta { flex-direction: row; align-items: center; gap: 1rem; }
+}
+</style>
+<link rel="alternate" type="text/plain" title="AI-readable summary" href="https://willturner.au/llms.txt">
+</head>
+<body>
+
+<!-- NAV -->
+<div id="site-nav"></div>
+
+<!-- HERO -->
+<div class="page-hero" style="position:relative;overflow:hidden;">
+  <!-- Coin — centred in right half, purely decorative -->
+  <div style="position:absolute;right:0;top:0;bottom:0;width:50%;display:flex;align-items:center;justify-content:center;pointer-events:none;" aria-hidden="true">
+    <picture>
+      <source srcset="penny-drop-coin.avif" type="image/avif">
+      <source srcset="penny-drop-coin.webp" type="image/webp">
+      <img src="penny-drop-coin.webp" alt="" style="width:380px;height:auto;display:block;opacity:0.45;">
+    </picture>
+  </div>
+  <!-- Hero text — unchanged -->
+  <div style="position:relative;z-index:2;">
+    <div class="page-eyebrow">Work with Will</div>
+    <h1 class="page-headline">Start with<br><em>a conversation.</em></h1>
+    <p class="page-sub">Every session. Every room. Every page. The penny drop.<br>Tell Will what you're working on &mdash; he'll come back to you directly.</p>
+  </div>
+</div>
+
+<!-- CONTACT TWO-COLUMN -->
+<div class="contact-wrap">
+
+  <!-- LEFT — Enquiry form -->
+  <div class="contact-left">
+    <div class="section-label">What are you looking for?</div>
+    <form id="contact-form" action="https://formspree.io/f/xbdwdqkq" method="POST">
+      <div style="margin-bottom:2rem;">
+        <p style="font-size:12px;color:rgba(240,237,230,0.35);margin-bottom:0.75rem;letter-spacing:0.05em;">Select all that apply</p>
+        <span class="offer-pill" onclick="this.classList.toggle('selected')">Keynote Speaker</span>
+        <span class="offer-pill" onclick="this.classList.toggle('selected')">Executive Coach</span>
+        <span class="offer-pill" onclick="this.classList.toggle('selected')">Trusted Advisor</span>
+        <span class="offer-pill" onclick="this.classList.toggle('selected')">The Book</span>
+        <span class="offer-pill" onclick="this.classList.toggle('selected')">Something else</span>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Your name</label>
+        <input type="text" name="name" required class="form-input" placeholder="First and last name">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Your organisation</label>
+        <input type="text" name="organisation" class="form-input" placeholder="Company or organisation">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email address</label>
+        <input type="email" name="email" required class="form-input" placeholder="you@yourcompany.com">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Tell Will what's going on</label>
+        <textarea name="message" class="form-input" placeholder="What's the challenge? What does the penny drop need to unlock for you? The more context you give Will, the better the conversation will be."></textarea>
+      </div>
+      <input type="hidden" name="_subject" value="New enquiry — willturner.au">
+      <!-- Honeypot — hidden from humans, bots fill it in -->
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <button type="submit" class="btn-primary" style="margin-top:0.5rem;width:100%;cursor:pointer;border:none;">Send to Will</button>
+    </form>
+    <script>
+      const form = document.getElementById('contact-form');
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const btn = form.querySelector('button[type=submit]');
+        btn.textContent = 'Sending...';
+        btn.style.opacity = '0.7';
+        const data = new FormData(form);
+        try {
+          const response = await fetch('https://formspree.io/f/xbdwdqkq', {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+          if (response.ok) {
+            window.location.href = 'thankyou.html';
+          } else {
+            btn.textContent = 'Send to Will';
+            btn.style.opacity = '1';
+            alert('Something went wrong. Please email will@willturner.au directly.');
+          }
+        } catch(err) {
+          btn.textContent = 'Send to Will';
+          btn.style.opacity = '1';
+          alert('Something went wrong. Please email will@willturner.au directly.');
+        }
+      });
+    </script>
+  </div>
+
+  <!-- RIGHT — Details + Calendly + What happens next -->
+  <div class="contact-right">
+
+    <!-- Contact details -->
+    <div class="section-label">The details</div>
+    <div class="detail-row">
+      <div class="detail-label">Email</div>
+      <div class="detail-val"><a href="mailto:will@willturner.au" style="color:inherit;text-decoration:none;">will@willturner.au</a></div>
+    </div>
+    <div class="detail-row">
+      <div class="detail-label">Based</div>
+      <div class="detail-val">Brisbane, Australia<br>Available nationally and internationally</div>
+    </div>
+    <div class="detail-row">
+      <div class="detail-label">Response</div>
+      <div class="detail-val">Will responds to every enquiry personally. Expect to hear back within 48 hours.</div>
+    </div>
+    <div class="detail-row" style="border-bottom:none;">
+      <div class="detail-label">LinkedIn</div>
+      <div class="detail-val"><a href="https://www.linkedin.com/in/willturnersimplexity" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;">linkedin.com/in/willturnersimplexity</a></div>
+    </div>
+
+    <!-- Calendly booking cards -->
+    <div class="calendly-section">
+      <div class="calendly-section-label">Or book a time directly</div>
+      <div class="calendly-cards">
+
+        <!-- Primary: Start the Conversation -->
+        <a href="https://calendly.com/willturner-au/start" target="_blank" rel="noopener" class="calendly-card primary">
+          <div class="calendly-card-text">
+            <div class="calendly-card-title">Start the Conversation</div>
+            <div class="calendly-card-desc">Not sure what you need? Start here. A short call to find the simple truth about whether working together makes sense.</div>
+          </div>
+          <div class="calendly-card-meta">
+            <div class="calendly-card-duration">20 min</div>
+            <div class="calendly-card-arrow">↗</div>
+          </div>
+        </a>
+
+        <!-- Coaching Session -->
+        <a href="https://calendly.com/willturner-au/coaching" target="_blank" rel="noopener" class="calendly-card">
+          <div class="calendly-card-text">
+            <div class="calendly-card-title">Coaching Session</div>
+            <div class="calendly-card-desc">For existing clients or if you're ready to begin. Book your first executive coaching session directly.</div>
+          </div>
+          <div class="calendly-card-meta">
+            <div class="calendly-card-duration">60 min</div>
+            <div class="calendly-card-arrow">↗</div>
+          </div>
+        </a>
+
+        <!-- Media Interview -->
+        <a href="https://calendly.com/willturner-au/media" target="_blank" rel="noopener" class="calendly-card">
+          <div class="calendly-card-text">
+            <div class="calendly-card-title">Media Interview</div>
+            <div class="calendly-card-desc">Podcast, press, or broadcast. Book time with Will for a media conversation about Simplexity.</div>
+          </div>
+          <div class="calendly-card-meta">
+            <div class="calendly-card-duration">30 min</div>
+            <div class="calendly-card-arrow">↗</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- What happens next -->
+    <div class="next-section">
+      <div class="section-label">What happens next</div>
+      <p style="font-size:17px;color:var(--cream-40);line-height:1.8;margin-bottom:1rem;">Will reads every message himself. If there's a fit, he'll suggest a short call &mdash; no pitch, just a conversation to find the simple truth about whether working together makes sense.</p>
+      <p style="font-size:17px;color:var(--cream-40);line-height:1.8;">Will is selective about the engagements he takes on. That's not arrogance &mdash; it's how he protects the quality of the penny drop.</p>
+    </div>
+
+  </div>
+</div>
+
+<div id="site-pre-footer"></div>
+
+<div id="site-footer"></div>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://willturner.au/"},{"@type":"ListItem","position":2,"name":"Contact","item":"https://willturner.au/contact"}]},{"@type":"WebPage","@id":"https://willturner.au/contact#webpage","url":"https://willturner.au/contact","name":"Work with Will Turner — Contact","dateModified":"2026-05-14"},{"@type":"Person","@id":"https://willturner.au/#will","name":"Will Turner","url":"https://willturner.au","jobTitle":"Keynote Speaker, Executive Coach, Trusted Advisor, Author","description":"Will Turner helps leaders cut through unconscious complexity and find the simple human truth at the centre of every challenge. Creator of Simplexity. Based in Brisbane, Australia.","address":{"@type":"PostalAddress","addressLocality":"Brisbane","addressRegion":"Queensland","addressCountry":"AU"}},{"@type":"ContactPage","name":"Work with Will Turner","url":"https://willturner.au/contact"}]}</script>
+<!-- Google Analytics — deferred until after page load -->
+<script>
+  window.addEventListener('load', function(){
+    var s = document.createElement('script');
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-3JH7PQW1F5';
+    s.defer = true;
+    document.head.appendChild(s);
+    s.onload = function(){
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3JH7PQW1F5');
+    };
+  });
+</script>
+<script src="main.js" defer></script>
+</body>
+</html>
