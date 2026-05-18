@@ -291,7 +291,8 @@ textarea.form-input { resize: vertical; min-height: 120px; }
         <textarea name="message" class="form-input" placeholder="What's the challenge? What does the penny drop need to unlock for you? The more context you give Will, the better the conversation will be."></textarea>
       </div>
       <input type="hidden" name="_subject" value="New enquiry — willturner.au">
-      <input type="hidden" name="_next" value="https://willturner.au/thankyou.html">
+      <!-- Honeypot — hidden from humans, bots fill it in -->
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
       <button type="submit" class="btn-primary" style="margin-top:0.5rem;width:100%;cursor:pointer;border:none;">Send to Will</button>
     </form>
     <script>
