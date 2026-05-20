@@ -143,6 +143,20 @@
     revealEls.forEach(function(el){ el.classList.add('is-visible'); });
   }
 
+  /* ─── 5. GOOGLE ANALYTICS ─────────────────────────────────── */
+  window.addEventListener('load', function(){
+    var s = document.createElement('script');
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-3JH7PQW1F5';
+    s.defer = true;
+    document.head.appendChild(s);
+    s.onload = function(){
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3JH7PQW1F5');
+    };
+  });
+
   /* ─── 6. EMAIL CAPTURE (homepage) ───────────────────────────── */
   var captureForm = document.getElementById('email-capture-form');
   if (captureForm) {

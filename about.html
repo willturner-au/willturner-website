@@ -315,21 +315,6 @@
   ]
 }
 </script>
-<!-- Google Analytics — deferred until after page load -->
-<script>
-  window.addEventListener('load', function(){
-    var s = document.createElement('script');
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-3JH7PQW1F5';
-    s.defer = true;
-    document.head.appendChild(s);
-    s.onload = function(){
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-3JH7PQW1F5');
-    };
-  });
-</script>
 <script src="main.js" defer></script>
 </body>
 </html>

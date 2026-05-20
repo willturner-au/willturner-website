@@ -430,3 +430,18 @@
       .tagline-strip p{font-size:17px}
       .offers-grid{grid-template-columns:1fr}
     }
+
+    /* ===== COACHING — What to expect grid ===== */
+    .expect-section-header { padding: 4rem 4rem 2rem; }
+    .expect-grid { padding: 0 4rem 4rem; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: var(--cream-10); }
+    .expect-cell { background: var(--shadow); padding: 2rem 1.75rem; }
+    .expect-cell-title { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--cream); margin: 0.75rem 0 0.5rem; font-weight: 700; }
+    .expect-cell-body { font-size: 16px; color: var(--cream-40); line-height: 1.65; }
+    @media(max-width:860px){
+      .expect-section-header { padding: 3rem 1.5rem 1.5rem; }
+      .expect-grid { padding: 0 1.5rem 3rem; grid-template-columns: 1fr; }
+    }
+    @media(max-width:560px){
+      .expect-section-header { padding: 2.5rem 1.25rem 1.25rem; }
+      .expect-grid { padding: 0 1.25rem 2.5rem; }
+    }
