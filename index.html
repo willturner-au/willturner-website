@@ -169,6 +169,9 @@
 .hero-headline em {
   font-style: italic;
   color: var(--gold);
+  /* Safari fix: italic gold text — explicit smoothing + own layer */
+  -webkit-font-smoothing: antialiased;
+  transform: translateZ(0);
 }
 .hero-sub {
   font-size: 20px;
