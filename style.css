@@ -129,10 +129,10 @@
     /* Safari fix: 0.5px height collapses on pseudo-elements — use transform:scaleY instead */
     .page-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gold); transform: scaleY(0.5); transform-origin: top; }
     .page-headline { font-family: 'Playfair Display', serif; font-size: clamp(40px, 5.5vw, 72px); font-weight: 700; line-height: 1.05; letter-spacing: -0.01em; color: var(--cream); margin-bottom: 1.25rem;
-      /* Safari fix: force own compositing layer to prevent blur bleed from backdrop-filter nav */
-      transform: translateZ(0); -webkit-font-smoothing: antialiased; }
-    /* Safari fix: italic gold text needs explicit smoothing to prevent double-render artefact */
-    .page-headline em { font-style: italic; color: var(--gold); -webkit-font-smoothing: antialiased; transform: translateZ(0); }
+      /* External monitor fix: greyscale antialiasing renders cleanly at 1x; avoid GPU promotion which degrades subpixel rendering on non-Retina displays */
+      -webkit-font-smoothing: antialiased; }
+    /* External monitor fix: isolate italic gold from backdrop-filter compositing without GPU layer promotion */
+    .page-headline em { font-style: italic; color: var(--gold); -webkit-font-smoothing: antialiased; isolation: isolate; }
     .page-sub { font-size: 19px; line-height: 1.7; color: var(--cream-60); max-width: 560px; font-weight: 300; }
     .cta-band { background: var(--shadow); padding: 5rem 4rem; text-align: center; border-top: 0.5px solid var(--cream-10); }
     .cta-headline { font-family: 'Playfair Display', serif; font-size: clamp(32px,4vw,52px); font-weight: 700; color: var(--cream); margin-bottom: 1rem; line-height: 1.1; }
