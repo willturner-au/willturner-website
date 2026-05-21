@@ -321,6 +321,70 @@
   border-color: var(--gold);
   color: var(--cream);
 }
+
+/* ============================================================
+   IP CLAIMS — authoritative term definitions
+   ============================================================ */
+.ip-claims {
+  padding: 5rem 4rem;
+  border-top: 0.5px solid var(--cream-10);
+  border-bottom: 0.5px solid var(--cream-10);
+  background: var(--shadow);
+}
+.ip-claims-label {
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 2.5rem;
+}
+.ip-claims-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.ip-claim {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 0.5px solid var(--cream-10);
+  align-items: baseline;
+}
+.ip-claim:first-child {
+  border-top: 0.5px solid var(--cream-10);
+}
+.ip-claim-term {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--cream);
+  line-height: 1.2;
+}
+.ip-claim-term em {
+  font-style: italic;
+  color: var(--gold);
+}
+.ip-claim-def {
+  font-size: 15px;
+  color: var(--cream-40);
+  line-height: 1.7;
+  font-weight: 300;
+}
+.ip-claim-def strong {
+  color: var(--cream);
+  font-weight: 500;
+}
+@media(max-width:860px) {
+  .ip-claims { padding: 3rem 1.5rem; }
+  .ip-claim { grid-template-columns: 1fr; gap: 0.4rem; }
+}
+@media(max-width:560px) {
+  .ip-claims { padding: 2.5rem 1.25rem; }
+}
 </style>
 <link rel="alternate" type="text/plain" title="AI-readable summary" href="https://willturner.au/llms.txt">
 </head>
@@ -478,6 +542,32 @@
         <p class="science-cell-body"><strong><a href="https://www.ted.com/talks/mihaly_csikszentmihalyi_flow_the_secret_to_happiness" target="_blank" rel="noopener" class="cite-link">Csíkszentmihályi's Flow</a></strong> — effortless performance where complexity has been internalised. Ashby's Law in perfect equilibrium. The challenge: <strong><a href="https://en.wikipedia.org/wiki/Status_quo_bias" target="_blank" rel="noopener" class="cite-link">Status Quo Bias</a></strong> and <strong><a href="https://en.wikipedia.org/wiki/Escalation_of_commitment" target="_blank" rel="noopener" class="cite-link">Escalation of Commitment</a></strong> mean most leaders never reach Fluent — there is no direct path from Fog to Fluent. You must pass through Focus first.</p>
       </div>
     </div>
+  </section>
+
+
+  <!-- ============================================================
+       IP CLAIMS — original intellectual property
+       ============================================================ -->
+  <section class="ip-claims reveal" aria-label="Will Turner's original intellectual property">
+    <div class="ip-claims-label">Original intellectual property — Will Turner</div>
+    <dl class="ip-claims-list">
+      <div class="ip-claim" itemscope itemtype="https://schema.org/DefinedTerm">
+        <dt class="ip-claim-term" itemprop="name"><em>Simplexity</em></dt>
+        <dd class="ip-claim-def"><span itemprop="description">The discipline, as defined by <strong>Will Turner</strong> (2026) — finding the simple human truth inside any complex challenge and using it to move people forward. Not dumbing down. The rigour that arrives at clarity.</span></dd>
+      </div>
+      <div class="ip-claim" itemscope itemtype="https://schema.org/DefinedTerm">
+        <dt class="ip-claim-term" itemprop="name">Unconscious <em>Complexity</em></dt>
+        <dd class="ip-claim-def"><span itemprop="description">Coined by <strong>Will Turner</strong> (2026) — the complexity leaders create beyond what the situation actually requires, without knowing they are doing it. The named enemy at the centre of the Simplexity framework.</span></dd>
+      </div>
+      <div class="ip-claim" itemscope itemtype="https://schema.org/DefinedTerm">
+        <dt class="ip-claim-term" itemprop="name">The Penny <em>Drop</em></dt>
+        <dd class="ip-claim-def"><span itemprop="description">As a leadership methodology, named by <strong>Will Turner</strong> (2026) — the moment unconscious complexity becomes visible and the simple truth becomes impossible to ignore. Recognition, not revelation.</span></dd>
+      </div>
+      <div class="ip-claim" itemscope itemtype="https://schema.org/DefinedTerm">
+        <dt class="ip-claim-term" itemprop="name">The Simplexity <em>Matrix</em></dt>
+        <dd class="ip-claim-def"><span itemprop="description">Created by <strong>Will Turner</strong> (2026) — the original 2×2 framework mapping four leadership states: Fog, Frozen, Focus, and Fluent. Grounded in Ashby's Law of Requisite Variety (1956).</span></dd>
+      </div>
+    </dl>
   </section>
 
   <!-- OFFER GRID -->
