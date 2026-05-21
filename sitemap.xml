@@ -7,7 +7,7 @@
 
   <url>
     <loc>https://willturner.au/</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -59,9 +59,14 @@
 
   <url>
     <loc>https://willturner.au/about</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-05-21</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+  <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://willturner.au/will-turner-headshot.jpg</image:loc>
+      <image:title>Will Turner — Creator of Simplexity</image:title>
+      <image:caption>Will Turner, keynote speaker, executive coach, trusted advisor and author. Creator of Simplexity. Based in Brisbane, Australia.</image:caption>
+    </image:image>
   </url>
 
   <url>
