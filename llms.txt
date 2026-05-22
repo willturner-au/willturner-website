@@ -23,7 +23,7 @@ Unconscious complexity is the complexity leaders create beyond what the situatio
 The penny drop is the moment unconscious complexity becomes visible and the simple truth becomes impossible to ignore. It is recognition, not revelation — the person already knew; Will shows them where to look. This is why it lands hard and why it lasts. Grounded in Klotz & Nature (2021) subtractive thinking research and Kahneman's Dual Process Theory. The penny drop is the signature output of every Will Turner keynote, coaching session, and advisory engagement.
 
 ### The Simplexity Matrix
-Will Turner's original 2×2 framework mapping four leadership states on axes of conscious/unconscious (x-axis) and simple/complex (y-axis):
+Will Turner's original 2×2 framework mapping four leadership states on axes of unconscious/conscious (vertical) and complexity/simplicity (horizontal):
 - **Fog** (unconscious complexity) — where Will finds you. Confident, busy, and invisible to yourself. Grounded in Kahneman's WYSIATI and Cognitive Load Theory.
 - **Frozen** (conscious complexity) — you can see the mess but you cannot cut through it. Grounded in Schwartz's Paradox of Choice and Decision Fatigue research.
 - **Focus** (conscious simplicity) — the simple truth is visible. You know exactly what to do next. Where Will takes you. Grounded in Klotz & Nature (2021) and Dual Process Theory.
