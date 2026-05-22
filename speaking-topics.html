@@ -39,119 +39,438 @@
 <link rel="stylesheet" href="style.css">
 <style>
 
-/* ─── TOPIC HERO ─── */
-.topics-hero {
-  padding: 10rem 4rem 5rem;
+/* ═══════════════════════════════════════════
+   HERO
+═══════════════════════════════════════════ */
+.st-hero {
+  padding: 10rem 4rem 6rem;
   border-bottom: 0.5px solid var(--cream-10);
+  position: relative;
+  overflow: hidden;
+}
+.st-hero::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -15%;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,169,110,0.06) 0%, transparent 65%);
+  pointer-events: none;
+}
+.st-hero-inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  grid-template-columns: 1fr 380px;
+  gap: 6rem;
   align-items: end;
 }
-.topics-hero-meta {
-  font-size: 15px;
-  color: var(--cream-40);
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
+.st-hero-quicknav {
+  border-top: 0.5px solid var(--cream-10);
 }
-.topics-hero-meta strong { color: var(--cream); font-weight: 500; }
-.topics-nav { display: flex; flex-direction: column; border-top: 0.5px solid var(--cream-10); }
-.topics-nav-item {
+.st-qnav-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75rem 0;
+  padding: 0.8rem 0;
   border-bottom: 0.5px solid var(--cream-10);
   text-decoration: none;
   transition: padding-left 0.2s;
+  gap: 1rem;
 }
-.topics-nav-item:hover { padding-left: 0.5rem; }
-.topics-nav-num { font-size: 10px; letter-spacing: 0.15em; color: rgba(201,169,110,0.4); min-width: 28px; transition: color 0.2s; }
-.topics-nav-item:hover .topics-nav-num { color: var(--gold); }
-.topics-nav-name { font-size: 14px; color: var(--cream-40); flex: 1; transition: color 0.2s; font-style: italic; font-family: 'Playfair Display', serif; }
-.topics-nav-item:hover .topics-nav-name { color: var(--cream); }
-.topics-nav-arrow { font-size: 12px; color: var(--cream-10); transition: color 0.2s; }
-.topics-nav-item:hover .topics-nav-arrow { color: var(--gold); }
+.st-qnav-item:hover { padding-left: 0.4rem; }
+.st-qnav-num {
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  color: rgba(201,169,110,0.35);
+  min-width: 20px;
+  transition: color 0.2s;
+}
+.st-qnav-item:hover .st-qnav-num { color: var(--gold); }
+.st-qnav-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 13px;
+  font-style: italic;
+  color: var(--cream-40);
+  flex: 1;
+  line-height: 1.3;
+  transition: color 0.2s;
+}
+.st-qnav-item:hover .st-qnav-name { color: var(--cream); }
+.st-qnav-arr {
+  font-size: 10px;
+  color: rgba(201,169,110,0.2);
+  transition: color 0.2s;
+}
+.st-qnav-item:hover .st-qnav-arr { color: var(--gold); }
 
-/* ─── PRINCIPLE STRIP ─── */
-.principle-strip {
-  padding: 3.5rem 4rem;
-  border-bottom: 0.5px solid var(--cream-10);
-  background: var(--shadow);
+/* ═══════════════════════════════════════════
+   SYSTEM STRIP  (Science / Life / Room shifts)
+═══════════════════════════════════════════ */
+.st-system {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-}
-.ps-cell { padding: 0 2.5rem 0 0; }
-.ps-cell + .ps-cell { padding: 0 2.5rem; border-left: 0.5px solid var(--cream-10); }
-.ps-cell:last-child { padding-right: 0; }
-.ps-num { font-size: 10px; color: var(--gold); letter-spacing: 0.15em; margin-bottom: 0.6rem; }
-.ps-title { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: var(--cream); margin-bottom: 0.4rem; }
-.ps-body { font-size: 14px; color: var(--cream-40); line-height: 1.65; }
-
-/* ─── TOPIC ENTRY ─── */
-.topic-entry { border-bottom: 0.5px solid var(--cream-10); scroll-margin-top: 80px; }
-.topic-entry-header {
-  display: grid;
-  grid-template-columns: 100px 1fr;
+  border-bottom: 0.5px solid var(--cream-10);
   background: var(--shadow);
+}
+.st-system-cell {
+  padding: 3rem 4rem;
+  border-right: 0.5px solid var(--cream-10);
+  position: relative;
+}
+.st-system-cell:last-child { border-right: none; }
+.st-system-roman {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+.st-system-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 0.6rem;
+  line-height: 1.15;
+}
+.st-system-body {
+  font-size: 14px;
+  color: var(--cream-40);
+  line-height: 1.7;
+}
+
+/* ═══════════════════════════════════════════
+   FLAGSHIP TALK (01 — full-width hero)
+═══════════════════════════════════════════ */
+.st-flagship {
+  border-bottom: 0.5px solid var(--cream-10);
+  scroll-margin-top: 80px;
+}
+.st-flagship-header {
+  padding: 5rem 4rem 0;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 0;
+  align-items: start;
+}
+.st-flagship-numeral {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(120px, 14vw, 180px);
+  font-weight: 700;
+  color: var(--gold);
+  opacity: 0.12;
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  user-select: none;
+}
+.st-flagship-title-block {
+  padding-top: 1.5rem;
+}
+.st-flagship-eyebrow {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+.st-tag {
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 2px;
+  background: var(--cream-06);
+  color: rgba(201,169,110,0.55);
+  border: 0.5px solid rgba(201,169,110,0.18);
+}
+.st-tag.gold {
+  background: rgba(201,169,110,0.1);
+  color: var(--gold);
+  border-color: rgba(201,169,110,0.45);
+}
+.st-flagship-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(42px, 6vw, 80px);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  color: var(--cream);
+  margin-bottom: 1rem;
+}
+.st-flagship-name em { font-style: italic; color: var(--gold); }
+.st-flagship-sub {
+  font-size: 18px;
+  color: var(--cream-40);
+  font-style: italic;
+  line-height: 1.5;
+  max-width: 600px;
+}
+.st-flagship-body {
+  padding: 3rem 4rem 0 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+.st-flagship-desc {
+  font-size: 18px;
+  color: var(--cream-40);
+  line-height: 1.85;
+  margin-bottom: 1.5rem;
+}
+.st-flagship-desc strong { color: var(--cream); font-weight: 500; }
+.st-flagship-penny {
+  border-left: 2px solid var(--gold);
+  padding: 1.25rem 1.5rem;
+  margin-top: 2rem;
+}
+.st-flagship-penny-label {
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(201,169,110,0.6);
+  margin-bottom: 0.5rem;
+}
+.st-flagship-penny-text {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: clamp(20px, 2vw, 26px);
+  color: var(--cream);
+  line-height: 1.4;
+}
+.st-flagship-meta {
+  padding-top: 1rem;
+}
+.st-meta-block {
+  margin-bottom: 2rem;
+}
+.st-meta-label {
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+  opacity: 0.7;
+}
+.st-format-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.55rem 0;
   border-bottom: 0.5px solid var(--cream-10);
 }
-.topic-entry-num-cell { border-right: 0.5px solid var(--cream-10); display: flex; align-items: center; justify-content: center; padding: 2rem; }
-.topic-entry-num { font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 700; color: var(--gold); opacity: 0.22; line-height: 1; }
-.topic-entry-title-cell { padding: 2rem 3rem; }
-.topic-tag-row { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.75rem; }
-.topic-tag { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; padding: 2px 8px; border-radius: 2px; background: var(--cream-06); color: rgba(201,169,110,0.55); border: 0.5px solid rgba(201,169,110,0.18); }
-.topic-tag.flagship { background: rgba(201,169,110,0.08); color: var(--gold); border-color: rgba(201,169,110,0.4); }
-.topic-name { font-family: 'Playfair Display', serif; font-size: clamp(24px, 3vw, 38px); font-weight: 700; color: var(--cream); line-height: 1.1; margin-bottom: 0.35rem; }
-.topic-name em { font-style: italic; color: var(--gold); }
-.topic-subtitle { font-size: 15px; color: var(--cream-40); font-style: italic; line-height: 1.4; }
-.topic-entry-body { display: grid; grid-template-columns: 1fr 320px; }
-.topic-body-left { padding: 2.5rem 3rem; border-right: 0.5px solid var(--cream-10); }
-.topic-body-right { padding: 2.5rem 2rem; background: var(--shadow); display: flex; flex-direction: column; gap: 1.75rem; }
-.topic-desc { font-size: 17px; color: var(--cream-40); line-height: 1.85; margin-bottom: 1.5rem; }
-.topic-desc strong { color: var(--cream); font-weight: 500; }
-.topic-penny { border-left: 2px solid var(--gold); padding: 1rem 1.25rem; }
-.topic-penny-label { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(201,169,110,0.6); margin-bottom: 0.4rem; }
-.topic-penny-text { font-family: 'Playfair Display', serif; font-style: italic; font-size: 18px; color: var(--cream); line-height: 1.5; }
-.topic-sidebar-label { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(201,169,110,0.5); margin-bottom: 0.6rem; }
-.topic-format-list { display: flex; flex-direction: column; }
-.topic-format-row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.5rem 0; border-bottom: 0.5px solid var(--cream-10); }
-.topic-format-row:last-child { border-bottom: none; }
-.topic-format-name { font-size: 13px; color: var(--cream-40); }
-.topic-format-val { font-size: 13px; color: var(--cream); }
-.topic-audience-list { display: flex; flex-direction: column; gap: 5px; }
-.topic-audience-item { font-size: 13px; color: var(--cream-40); display: flex; align-items: flex-start; gap: 8px; line-height: 1.5; }
-.topic-audience-item::before { content: ''; display: block; width: 3px; height: 3px; border-radius: 50%; background: rgba(201,169,110,0.4); flex-shrink: 0; margin-top: 7px; }
-.topic-cta { margin-top: auto; padding-top: 1.25rem; border-top: 0.5px solid var(--cream-10); }
-.topic-cta a { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; transition: opacity 0.2s; }
-.topic-cta a:hover { opacity: 0.7; }
+.st-format-row:last-child { border-bottom: none; }
+.st-format-name { font-size: 14px; color: var(--cream-40); }
+.st-format-val { font-size: 14px; color: var(--cream); letter-spacing: 0.02em; }
+.st-audience-item {
+  font-size: 14px;
+  color: var(--cream-40);
+  padding: 0.45rem 0;
+  border-bottom: 0.5px solid var(--cream-10);
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  line-height: 1.5;
+}
+.st-audience-item:last-child { border-bottom: none; }
+.st-audience-item::before {
+  content: '';
+  display: block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(201,169,110,0.4);
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+.st-flagship-cta {
+  padding: 3rem 4rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
 
-/* ─── RESPONSIVE ─── */
+/* ═══════════════════════════════════════════
+   STANDARD TALKS (02–07)
+═══════════════════════════════════════════ */
+.st-talk {
+  border-bottom: 0.5px solid var(--cream-10);
+  scroll-margin-top: 80px;
+}
+.st-talk:nth-child(even) { background: var(--shadow); }
+.st-talk-inner {
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+.st-talk-num {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(64px, 8vw, 96px);
+  font-weight: 700;
+  color: var(--gold);
+  opacity: 0.18;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  user-select: none;
+  padding-top: 0.1em;
+}
+.st-talk-content {}
+.st-talk-eyebrow {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.st-talk-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(26px, 3.5vw, 44px);
+  font-weight: 700;
+  color: var(--cream);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.4rem;
+}
+.st-talk-name em { font-style: italic; color: var(--gold); }
+.st-talk-sub {
+  font-size: 15px;
+  color: var(--cream-40);
+  font-style: italic;
+  line-height: 1.45;
+  margin-bottom: 2rem;
+  max-width: 560px;
+}
+.st-talk-grid {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 4rem;
+  align-items: start;
+}
+.st-talk-desc {
+  font-size: 16px;
+  color: var(--cream-40);
+  line-height: 1.85;
+  margin-bottom: 1.5rem;
+}
+.st-talk-desc strong { color: var(--cream); font-weight: 500; }
+.st-talk-penny {
+  border-left: 2px solid rgba(201,169,110,0.5);
+  padding: 0.85rem 1.25rem;
+  margin-top: 1rem;
+}
+.st-talk-penny-label {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(201,169,110,0.5);
+  margin-bottom: 0.35rem;
+}
+.st-talk-penny-text {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 17px;
+  color: var(--cream);
+  line-height: 1.5;
+}
+.st-talk-sidebar {}
+.st-talk-cta {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 0.5px solid var(--cream-10);
+}
+.st-talk-cta a {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s;
+}
+.st-talk-cta a:hover { opacity: 0.7; }
+
+/* ═══════════════════════════════════════════
+   MID-PAGE INTERRUPTER
+═══════════════════════════════════════════ */
+.st-interrupt {
+  padding: 6rem 4rem;
+  text-align: center;
+  background: var(--shadow);
+  border-top: 0.5px solid var(--cream-10);
+  border-bottom: 0.5px solid var(--cream-10);
+  position: relative;
+  overflow: hidden;
+}
+.st-interrupt::before {
+  content: '\201C';
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Playfair Display', serif;
+  font-size: 120px;
+  color: var(--gold);
+  opacity: 0.08;
+  line-height: 1;
+  pointer-events: none;
+}
+.st-interrupt-text {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(22px, 3vw, 40px);
+  font-style: italic;
+  color: var(--cream);
+  max-width: 780px;
+  margin: 0 auto 1.25rem;
+  line-height: 1.3;
+}
+.st-interrupt-attr {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.75;
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════ */
 @media(max-width:1024px) {
-  .topics-hero { padding: 9rem 2.5rem 4rem; }
-  .topic-entry-body { grid-template-columns: 1fr 260px; }
-  .topic-body-left { padding: 2rem; }
+  .st-hero-inner { grid-template-columns: 1fr 320px; gap: 4rem; }
+  .st-flagship-header { padding: 4rem 3rem 0; grid-template-columns: 140px 1fr; }
+  .st-flagship-body { padding: 2.5rem 3rem 0; gap: 3rem; }
+  .st-flagship-cta { padding: 2.5rem 3rem; }
+  .st-talk-inner { padding: 3rem; gap: 2rem; }
+  .st-talk-grid { gap: 2.5rem; }
 }
 @media(max-width:860px) {
-  .topics-hero { grid-template-columns: 1fr; padding: 8rem 1.5rem 3rem; gap: 2rem; }
-  .topic-entry-header { grid-template-columns: 64px 1fr; }
-  .topic-entry-num-cell { padding: 1.25rem; }
-  .topic-entry-num { font-size: 30px; }
-  .topic-entry-title-cell { padding: 1.5rem; }
-  .topic-entry-body { grid-template-columns: 1fr; }
-  .topic-body-left { border-right: none; border-bottom: 0.5px solid var(--cream-10); padding: 1.75rem 1.5rem; }
-  .topic-body-right { padding: 1.75rem 1.5rem; }
-  .topic-cta { margin-top: 0; }
-  .principle-strip { grid-template-columns: 1fr; padding: 3rem 1.5rem; gap: 1.5rem; }
-  .ps-cell, .ps-cell + .ps-cell { padding: 0; border: none; }
+  .st-hero { padding: 8rem 1.5rem 4rem; }
+  .st-hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .st-system { grid-template-columns: 1fr; }
+  .st-system-cell { padding: 2.5rem 1.5rem; border-right: none; border-bottom: 0.5px solid var(--cream-10); }
+  .st-system-cell:last-child { border-bottom: none; }
+  .st-flagship-header { grid-template-columns: 80px 1fr; padding: 3rem 1.5rem 0; gap: 1rem; }
+  .st-flagship-numeral { font-size: 80px; }
+  .st-flagship-name { font-size: clamp(36px, 8vw, 56px); }
+  .st-flagship-body { grid-template-columns: 1fr; padding: 2rem 1.5rem 0; gap: 2rem; }
+  .st-flagship-cta { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .st-talk-inner { padding: 2.5rem 1.5rem; grid-template-columns: 60px 1fr; gap: 1.25rem; }
+  .st-talk-num { font-size: 52px; }
+  .st-talk-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .st-interrupt { padding: 4rem 1.5rem; }
 }
 @media(max-width:560px) {
-  .topics-hero { padding: 7rem 1.25rem 2.5rem; }
-  .topic-entry-header { grid-template-columns: 1fr; }
-  .topic-entry-num-cell { display: none; }
-  .topic-entry-title-cell { padding: 1.25rem; }
-  .topic-body-left { padding: 1.5rem 1.25rem; }
-  .topic-body-right { padding: 1.5rem 1.25rem; }
+  .st-hero { padding: 7rem 1.25rem 3rem; }
+  .st-flagship-header { grid-template-columns: 1fr; padding: 2.5rem 1.25rem 0; }
+  .st-flagship-numeral { display: none; }
+  .st-flagship-body { padding: 1.75rem 1.25rem 0; }
+  .st-flagship-cta { padding: 1.75rem 1.25rem; }
+  .st-talk-inner { padding: 2rem 1.25rem; grid-template-columns: 1fr; gap: 0.75rem; }
+  .st-talk-num { display: none; }
+  .st-interrupt { padding: 3rem 1.25rem; }
 }
 </style>
 <link rel="alternate" type="text/plain" title="AI-readable summary" href="https://willturner.au/llms.txt">
@@ -159,195 +478,366 @@
 <body>
 <div id="site-nav"></div>
 
-<section class="topics-hero reveal">
-  <div>
-    <div class="page-eyebrow">Speaking Topics</div>
-    <h1 class="page-headline">Seven talks.<br><em>One system.</em></h1>
-    <p class="page-sub">Every talk is built on the Simplexity framework &mdash; engineered to trigger a specific penny drop for a specific audience. The format adapts. The outcome doesn't.</p>
-  </div>
-  <div>
-    <p class="topics-hero-meta">Will's keynotes run <strong>45&ndash;60 minutes</strong> and are fully customised to the organisation's challenge. Workshop and half-day formats available for every topic. <strong>Any industry. Any leadership audience.</strong></p>
-    <nav class="topics-nav" aria-label="Topic quick links">
-      <a href="#topic-01" class="topics-nav-item"><span class="topics-nav-num">01</span><span class="topics-nav-name">Simplexity</span><span class="topics-nav-arrow">&darr;</span></a>
-      <a href="#topic-02" class="topics-nav-item"><span class="topics-nav-num">02</span><span class="topics-nav-name">The Clarity Advantage</span><span class="topics-nav-arrow">&darr;</span></a>
-      <a href="#topic-03" class="topics-nav-item"><span class="topics-nav-num">03</span><span class="topics-nav-name">The Human in the Room</span><span class="topics-nav-arrow">&darr;</span></a>
-      <a href="#topic-04" class="topics-nav-item"><span class="topics-nav-num">04</span><span class="topics-nav-name">The Fog Index</span><span class="topics-nav-arrow">&darr;</span></a>
-      <a href="#topic-05" class="topics-nav-item"><span class="topics-nav-num">05</span><span class="topics-nav-name">The Cost of Complexity</span><span class="topics-nav-arrow">&darr;</span></a>
-      <a href="#topic-06" class="topics-nav-item"><span class="topics-nav-num">06</span><span class="topics-nav-name">Fluent Leadership</span><span class="topics-nav-arrow">&darr;</span></a>
-      <a href="#topic-07" class="topics-nav-item"><span class="topics-nav-num">07</span><span class="topics-nav-name">The Penny Drop Culture</span><span class="topics-nav-arrow">&darr;</span></a>
+<!-- ═══ HERO ═══ -->
+<section class="st-hero reveal">
+  <div class="st-hero-inner">
+    <div>
+      <div class="page-eyebrow">Speaking Topics</div>
+      <h1 class="page-headline">Seven talks.<br><em>One system.</em></h1>
+      <p class="page-sub">Every talk is built on the Simplexity framework &mdash; engineered to trigger a specific penny drop for a specific audience. The format adapts. The outcome doesn't.</p>
+    </div>
+    <nav class="st-hero-quicknav" aria-label="Jump to topic">
+      <a href="#topic-01" class="st-qnav-item"><span class="st-qnav-num">01</span><span class="st-qnav-name">Simplexity</span><span class="st-qnav-arr">&darr;</span></a>
+      <a href="#topic-02" class="st-qnav-item"><span class="st-qnav-num">02</span><span class="st-qnav-name">The Clarity Advantage</span><span class="st-qnav-arr">&darr;</span></a>
+      <a href="#topic-03" class="st-qnav-item"><span class="st-qnav-num">03</span><span class="st-qnav-name">The Human in the Room</span><span class="st-qnav-arr">&darr;</span></a>
+      <a href="#topic-04" class="st-qnav-item"><span class="st-qnav-num">04</span><span class="st-qnav-name">The Fog Index</span><span class="st-qnav-arr">&darr;</span></a>
+      <a href="#topic-05" class="st-qnav-item"><span class="st-qnav-num">05</span><span class="st-qnav-name">The Cost of Complexity</span><span class="st-qnav-arr">&darr;</span></a>
+      <a href="#topic-06" class="st-qnav-item"><span class="st-qnav-num">06</span><span class="st-qnav-name">Fluent Leadership</span><span class="st-qnav-arr">&darr;</span></a>
+      <a href="#topic-07" class="st-qnav-item"><span class="st-qnav-num">07</span><span class="st-qnav-name">The Penny Drop Culture</span><span class="st-qnav-arr">&darr;</span></a>
     </nav>
   </div>
 </section>
 
-<div class="principle-strip">
-  <div class="ps-cell"><div class="ps-num">I.</div><div class="ps-title">Science first</div><p class="ps-body">Every talk is grounded in peer-reviewed research &mdash; Kahneman, Ashby, Klotz, Cs&iacute;kszentmih&aacute;lyi. The rigour is real. The room doesn't need to know the citations to feel their weight.</p></div>
-  <div class="ps-cell"><div class="ps-num">II.</div><div class="ps-title">Life-familiar by design</div><p class="ps-body">Science first. Then a human moment. Then the business application. In that order, every time. The room recognises itself &mdash; and the penny drop becomes inevitable.</p></div>
-  <div class="ps-cell"><div class="ps-num">III.</div><div class="ps-title">The room shifts</div><p class="ps-body">Not takeaways. A genuine cognitive shift &mdash; where the simple truth was always there and suddenly can't be unseen. People leave in a different place than where they started.</p></div>
+<!-- ═══ SYSTEM STRIP ═══ -->
+<div class="st-system">
+  <div class="st-system-cell">
+    <div class="st-system-roman">I.</div>
+    <div class="st-system-title">Science first</div>
+    <p class="st-system-body">Every talk is grounded in peer-reviewed research &mdash; Kahneman, Ashby, Klotz, Cs&iacute;kszentmih&aacute;lyi. The rigour earns the room. The room doesn't need to know the citations to feel their weight.</p>
+  </div>
+  <div class="st-system-cell">
+    <div class="st-system-roman">II.</div>
+    <div class="st-system-title">Life-familiar by design</div>
+    <p class="st-system-body">Science first. Then the human moment every person in the room already knows. Then the business application. In that order, every time. Recognition becomes inevitable.</p>
+  </div>
+  <div class="st-system-cell">
+    <div class="st-system-roman">III.</div>
+    <div class="st-system-title">The room shifts</div>
+    <p class="st-system-body">Not inspiration. Not takeaways. A genuine cognitive shift &mdash; the moment the simple truth becomes impossible to ignore and impossible to unsee. People leave in a different place.</p>
+  </div>
 </div>
 
-<article class="topic-entry reveal" id="topic-01">
-  <div class="topic-entry-header">
-    <div class="topic-entry-num-cell" aria-hidden="true"><div class="topic-entry-num">01</div></div>
-    <div class="topic-entry-title-cell">
-      <div class="topic-tag-row"><span class="topic-tag flagship">Flagship</span><span class="topic-tag">Any industry</span><span class="topic-tag">Any audience</span><span class="topic-tag">60 min</span></div>
-      <h2 class="topic-name"><em>Simplexity</em></h2>
-      <div class="topic-subtitle">Why smart leaders make it harder than it needs to be &mdash; and how to stop</div>
+<!-- ═══════════════════════════════════════════
+     01 — FLAGSHIP
+═══════════════════════════════════════════ -->
+<article class="st-flagship reveal" id="topic-01">
+  <div class="st-flagship-header">
+    <div class="st-flagship-numeral" aria-hidden="true">01</div>
+    <div class="st-flagship-title-block">
+      <div class="st-flagship-eyebrow">
+        <span class="st-tag gold">Flagship</span>
+        <span class="st-tag">Any industry</span>
+        <span class="st-tag">Any audience</span>
+        <span class="st-tag">60 min</span>
+      </div>
+      <h2 class="st-flagship-name"><em>Simplexity</em></h2>
+      <div class="st-flagship-sub">Why smart leaders make it harder than it needs to be &mdash; and how to stop</div>
     </div>
   </div>
-  <div class="topic-entry-body">
-    <div class="topic-body-left">
-      <p class="topic-desc">Most leaders know something is wrong. The weight is real &mdash; the meetings that multiply, the strategies that collapse, the decisions that take too long. What they can't name is why. <strong>This talk names it.</strong></p>
-      <p class="topic-desc">Will Turner shows leadership audiences precisely how they're creating complexity beyond what the situation requires &mdash; without knowing they're doing it. The penny drop happens live. People don't just leave thinking differently. They leave lighter. That's not inspiration. That's Simplexity.</p>
-      <p class="topic-desc">Grounded in Ashby's Law of Requisite Variety, Kahneman's WYSIATI, and Cognitive Load Theory. Science that earns the room, then a human moment that changes it.</p>
-      <div class="topic-penny"><div class="topic-penny-label">The penny drop</div><div class="topic-penny-text">&ldquo;I've been treating complexity as something that happens to me. I've been creating it.&rdquo;</div></div>
+  <div class="st-flagship-body">
+    <div>
+      <p class="st-flagship-desc">Most leaders know something is wrong. The weight is real &mdash; the meetings that multiply, the strategies that collapse, the decisions that take too long. What they can't name is why. <strong>This talk names it.</strong></p>
+      <p class="st-flagship-desc">Will Turner shows leadership audiences precisely how they're creating complexity beyond what the situation requires &mdash; without knowing they're doing it. The penny drop happens live. People don't just leave thinking differently. They leave lighter. That's not inspiration. That's Simplexity.</p>
+      <p class="st-flagship-desc">Grounded in Ashby's Law of Requisite Variety, Kahneman's WYSIATI, and Cognitive Load Theory. Science that earns the room, then a human moment that changes it.</p>
+      <div class="st-flagship-penny">
+        <div class="st-flagship-penny-label">The penny drop</div>
+        <div class="st-flagship-penny-text">&ldquo;I've been treating complexity as something that happens to me. I've been creating it.&rdquo;</div>
+      </div>
     </div>
-    <div class="topic-body-right">
-      <div><div class="topic-sidebar-label">Formats</div><div class="topic-format-list"><div class="topic-format-row"><span class="topic-format-name">Keynote</span><span class="topic-format-val">60 min</span></div><div class="topic-format-row"><span class="topic-format-name">Workshop</span><span class="topic-format-val">90 min</span></div><div class="topic-format-row"><span class="topic-format-name">Leadership session</span><span class="topic-format-val">Half-day</span></div><div class="topic-format-row"><span class="topic-format-name">Customisation</span><span class="topic-format-val">Every engagement</span></div></div></div>
-      <div><div class="topic-sidebar-label">Ideal for</div><div class="topic-audience-list"><div class="topic-audience-item">Leadership conferences, any industry</div><div class="topic-audience-item">Executive offsites and team events</div><div class="topic-audience-item">Strategy kick-offs</div><div class="topic-audience-item">All-hands and town halls</div></div></div>
-      <div class="topic-cta"><a href="contact.html">Book this talk &rarr;</a></div>
+    <div class="st-flagship-meta">
+      <div class="st-meta-block">
+        <div class="st-meta-label">Formats</div>
+        <div class="st-format-row"><span class="st-format-name">Keynote</span><span class="st-format-val">60 min</span></div>
+        <div class="st-format-row"><span class="st-format-name">Workshop</span><span class="st-format-val">90 min</span></div>
+        <div class="st-format-row"><span class="st-format-name">Leadership session</span><span class="st-format-val">Half-day</span></div>
+        <div class="st-format-row"><span class="st-format-name">Customisation</span><span class="st-format-val">Every engagement</span></div>
+      </div>
+      <div class="st-meta-block">
+        <div class="st-meta-label">Ideal for</div>
+        <div class="st-audience-item">Leadership conferences, any industry</div>
+        <div class="st-audience-item">Executive offsites and team events</div>
+        <div class="st-audience-item">Strategy kick-offs</div>
+        <div class="st-audience-item">All-hands and town halls</div>
+      </div>
+    </div>
+  </div>
+  <div class="st-flagship-cta">
+    <a href="contact.html" class="btn-primary">Book this talk</a>
+    <a href="speaking.html" class="btn-ghost">Back to speaking &rarr;</a>
+  </div>
+</article>
+
+<!-- ═══════════════════════════════════════════
+     02
+═══════════════════════════════════════════ -->
+<article class="st-talk reveal" id="topic-02">
+  <div class="st-talk-inner">
+    <div class="st-talk-num" aria-hidden="true">02</div>
+    <div class="st-talk-content">
+      <div class="st-talk-eyebrow">
+        <span class="st-tag">Provocation</span>
+        <span class="st-tag">Leadership &amp; L&amp;D</span>
+        <span class="st-tag">45 min</span>
+      </div>
+      <h2 class="st-talk-name">The <em>Clarity</em> Advantage</h2>
+      <div class="st-talk-sub">Why great leaders don't have a communication problem &mdash; they have a thinking one</div>
+      <div class="st-talk-grid">
+        <div>
+          <p class="st-talk-desc">Every leadership communication programme teaches leaders how to say it better. Almost none of them ask whether the leader has actually found the thing worth saying.</p>
+          <p class="st-talk-desc"><strong>This talk dismantles the most expensive myth in leadership development</strong> &mdash; that clarity is a communication skill &mdash; and shows why the leaders who communicate with the most power got there by thinking differently, not speaking differently. Provocative, precise, and impossible to ignore.</p>
+          <div class="st-talk-penny">
+            <div class="st-talk-penny-label">The penny drop</div>
+            <div class="st-talk-penny-text">&ldquo;Every communication fix I've ever tried was treating the symptom. The problem was never how I said it.&rdquo;</div>
+          </div>
+        </div>
+        <div class="st-talk-sidebar">
+          <div class="st-meta-block">
+            <div class="st-meta-label">Formats</div>
+            <div class="st-format-row"><span class="st-format-name">Keynote</span><span class="st-format-val">45 min</span></div>
+            <div class="st-format-row"><span class="st-format-name">Workshop</span><span class="st-format-val">90 min</span></div>
+            <div class="st-format-row"><span class="st-format-name">L&amp;D session</span><span class="st-format-val">Half-day</span></div>
+          </div>
+          <div class="st-meta-block">
+            <div class="st-meta-label">Ideal for</div>
+            <div class="st-audience-item">Leadership development conferences</div>
+            <div class="st-audience-item">L&amp;D teams and practitioners</div>
+            <div class="st-audience-item">Communication and influence events</div>
+            <div class="st-audience-item">Executive education programmes</div>
+          </div>
+          <div class="st-talk-cta"><a href="contact.html">Book this talk &rarr;</a></div>
+        </div>
+      </div>
     </div>
   </div>
 </article>
 
-<article class="topic-entry reveal" id="topic-02">
-  <div class="topic-entry-header">
-    <div class="topic-entry-num-cell" aria-hidden="true"><div class="topic-entry-num">02</div></div>
-    <div class="topic-entry-title-cell">
-      <div class="topic-tag-row"><span class="topic-tag">Provocation</span><span class="topic-tag">Leadership &amp; L&amp;D</span><span class="topic-tag">45 min</span></div>
-      <h2 class="topic-name">The <em>Clarity</em> Advantage</h2>
-      <div class="topic-subtitle">Why great leaders don't have a communication problem &mdash; they have a thinking one</div>
-    </div>
-  </div>
-  <div class="topic-entry-body">
-    <div class="topic-body-left">
-      <p class="topic-desc">Every leadership communication programme teaches leaders how to say it better. Almost none of them ask whether the leader has actually found the thing worth saying.</p>
-      <p class="topic-desc"><strong>This talk dismantles the most expensive myth in leadership development</strong> &mdash; that clarity is a communication skill &mdash; and shows why the leaders who communicate with the most power got there by thinking differently, not speaking differently. Provocative, precise, and impossible to ignore.</p>
-      <div class="topic-penny"><div class="topic-penny-label">The penny drop</div><div class="topic-penny-text">&ldquo;Every communication fix I've ever tried was treating the symptom. The problem was never how I said it.&rdquo;</div></div>
-    </div>
-    <div class="topic-body-right">
-      <div><div class="topic-sidebar-label">Formats</div><div class="topic-format-list"><div class="topic-format-row"><span class="topic-format-name">Keynote</span><span class="topic-format-val">45 min</span></div><div class="topic-format-row"><span class="topic-format-name">Workshop</span><span class="topic-format-val">90 min</span></div><div class="topic-format-row"><span class="topic-format-name">L&amp;D session</span><span class="topic-format-val">Half-day</span></div></div></div>
-      <div><div class="topic-sidebar-label">Ideal for</div><div class="topic-audience-list"><div class="topic-audience-item">Leadership development conferences</div><div class="topic-audience-item">L&amp;D teams and practitioners</div><div class="topic-audience-item">Communication and influence events</div><div class="topic-audience-item">Executive education programmes</div></div></div>
-      <div class="topic-cta"><a href="contact.html">Book this talk &rarr;</a></div>
-    </div>
-  </div>
-</article>
-
-<article class="topic-entry reveal" id="topic-03">
-  <div class="topic-entry-header">
-    <div class="topic-entry-num-cell" aria-hidden="true"><div class="topic-entry-num">03</div></div>
-    <div class="topic-entry-title-cell">
-      <div class="topic-tag-row"><span class="topic-tag">Conference keynote</span><span class="topic-tag">Any industry</span><span class="topic-tag">60 min</span></div>
-      <h2 class="topic-name">The <em>Human</em> in the Room</h2>
-      <div class="topic-subtitle">The insight that unlocks every room</div>
-    </div>
-  </div>
-  <div class="topic-entry-body">
-    <div class="topic-body-left">
-      <p class="topic-desc">Every unsolvable business problem has a human being at its centre. Not a stakeholder. Not a customer segment. <strong>A person &mdash; with an experience every other person in the room has already lived.</strong></p>
-      <p class="topic-desc">This talk shows conference audiences why finding that person is always the fastest path forward &mdash; and why it produces the penny drop every time. The moment the business problem becomes a human one is the moment it becomes solvable. Works at scale: 50 people or 5,000.</p>
-      <div class="topic-penny"><div class="topic-penny-label">The penny drop</div><div class="topic-penny-text">&ldquo;We've been solving for the problem. We should have been solving for the person.&rdquo;</div></div>
-    </div>
-    <div class="topic-body-right">
-      <div><div class="topic-sidebar-label">Formats</div><div class="topic-format-list"><div class="topic-format-row"><span class="topic-format-name">Keynote</span><span class="topic-format-val">60 min</span></div><div class="topic-format-row"><span class="topic-format-name">Workshop</span><span class="topic-format-val">Half-day</span></div></div></div>
-      <div><div class="topic-sidebar-label">Ideal for</div><div class="topic-audience-list"><div class="topic-audience-item">Large conference keynotes</div><div class="topic-audience-item">Customer experience conferences</div><div class="topic-audience-item">Innovation and strategy events</div><div class="topic-audience-item">Any audience of 50 to 5,000</div></div></div>
-      <div class="topic-cta"><a href="contact.html">Book this talk &rarr;</a></div>
+<!-- ═══════════════════════════════════════════
+     03
+═══════════════════════════════════════════ -->
+<article class="st-talk reveal" id="topic-03">
+  <div class="st-talk-inner">
+    <div class="st-talk-num" aria-hidden="true">03</div>
+    <div class="st-talk-content">
+      <div class="st-talk-eyebrow">
+        <span class="st-tag">Conference keynote</span>
+        <span class="st-tag">Any industry</span>
+        <span class="st-tag">60 min</span>
+      </div>
+      <h2 class="st-talk-name">The <em>Human</em> in the Room</h2>
+      <div class="st-talk-sub">The insight that unlocks every room</div>
+      <div class="st-talk-grid">
+        <div>
+          <p class="st-talk-desc">Every unsolvable business problem has a human being at its centre. Not a stakeholder. Not a customer segment. <strong>A person &mdash; with an experience every other person in the room has already lived.</strong></p>
+          <p class="st-talk-desc">This talk shows conference audiences why finding that person is always the fastest path forward &mdash; and why it produces the penny drop every time. Works at scale: 50 people or 5,000.</p>
+          <div class="st-talk-penny">
+            <div class="st-talk-penny-label">The penny drop</div>
+            <div class="st-talk-penny-text">&ldquo;We've been solving for the problem. We should have been solving for the person.&rdquo;</div>
+          </div>
+        </div>
+        <div class="st-talk-sidebar">
+          <div class="st-meta-block">
+            <div class="st-meta-label">Formats</div>
+            <div class="st-format-row"><span class="st-format-name">Keynote</span><span class="st-format-val">60 min</span></div>
+            <div class="st-format-row"><span class="st-format-name">Workshop</span><span class="st-format-val">Half-day</span></div>
+          </div>
+          <div class="st-meta-block">
+            <div class="st-meta-label">Ideal for</div>
+            <div class="st-audience-item">Large conference keynotes</div>
+            <div class="st-audience-item">Customer experience conferences</div>
+            <div class="st-audience-item">Innovation and strategy events</div>
+            <div class="st-audience-item">Any audience of 50 to 5,000</div>
+          </div>
+          <div class="st-talk-cta"><a href="contact.html">Book this talk &rarr;</a></div>
+        </div>
+      </div>
     </div>
   </div>
 </article>
 
-<article class="topic-entry reveal" id="topic-04">
-  <div class="topic-entry-header">
-    <div class="topic-entry-num-cell" aria-hidden="true"><div class="topic-entry-num">04</div></div>
-    <div class="topic-entry-title-cell">
-      <div class="topic-tag-row"><span class="topic-tag">C-suite &amp; boards</span><span class="topic-tag">Strategy</span><span class="topic-tag">45&ndash;60 min</span></div>
-      <h2 class="topic-name">The <em>Fog</em> Index</h2>
-      <div class="topic-subtitle">Measuring what your complexity is actually costing you</div>
-    </div>
-  </div>
-  <div class="topic-entry-body">
-    <div class="topic-body-left">
-      <p class="topic-desc">Most organisations don't have a complexity problem &mdash; they have a measurement problem. They can't see what the complexity is costing them, so they keep creating more of it.</p>
-      <p class="topic-desc"><strong>This talk gives leadership teams the diagnostic they've never had</strong>: a way to see their unconscious complexity clearly, for the first time. The Fog Index makes visible what effort has been hiding. For C-suite audiences who know something is wrong &mdash; and are ready to name it precisely.</p>
-      <p class="topic-desc">Grounded in Decision Fatigue research, McKinsey's complexity cost data, and Ashby's Law. Precision language for senior audiences tired of vague descriptions of organisational drag.</p>
-      <div class="topic-penny"><div class="topic-penny-label">The penny drop</div><div class="topic-penny-text">&ldquo;We've been measuring effort, not output. And we've been confusing the two.&rdquo;</div></div>
-    </div>
-    <div class="topic-body-right">
-      <div><div class="topic-sidebar-label">Formats</div><div class="topic-format-list"><div class="topic-format-row"><span class="topic-format-name">Keynote</span><span class="topic-format-val">45 min</span></div><div class="topic-format-row"><span class="topic-format-name">With Q&amp;A</span><span class="topic-format-val">60 min</span></div><div class="topic-format-row"><span class="topic-format-name">C-suite workshop</span><span class="topic-format-val">Half-day</span></div></div></div>
-      <div><div class="topic-sidebar-label">Ideal for</div><div class="topic-audience-list"><div class="topic-audience-item">CEO and C-suite audiences</div><div class="topic-audience-item">Board strategy sessions</div><div class="topic-audience-item">Strategy and transformation conferences</div><div class="topic-audience-item">Executive leadership summits</div></div></div>
-      <div class="topic-cta"><a href="contact.html">Book this talk &rarr;</a></div>
+<!-- ═══════════════════════════════════════════
+     INTERRUPTER
+═══════════════════════════════════════════ -->
+<div class="st-interrupt reveal">
+  <p class="st-interrupt-text">&ldquo;Will didn't just deliver a keynote. He changed the way our entire leadership team thinks about complexity. The penny drop was real &mdash; and we're still feeling it six months later.&rdquo;</p>
+  <div class="st-interrupt-attr">CEO &mdash; Financial Services &mdash; Brisbane</div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     04
+═══════════════════════════════════════════ -->
+<article class="st-talk reveal" id="topic-04">
+  <div class="st-talk-inner">
+    <div class="st-talk-num" aria-hidden="true">04</div>
+    <div class="st-talk-content">
+      <div class="st-talk-eyebrow">
+        <span class="st-tag">C-suite &amp; boards</span>
+        <span class="st-tag">Strategy</span>
+        <span class="st-tag">45&ndash;60 min</span>
+      </div>
+      <h2 class="st-talk-name">The <em>Fog</em> Index</h2>
+      <div class="st-talk-sub">Measuring what your complexity is actually costing you</div>
+      <div class="st-talk-grid">
+        <div>
+          <p class="st-talk-desc">Most organisations don't have a complexity problem &mdash; they have a measurement problem. They can't see what the complexity is costing them, so they keep creating more of it.</p>
+          <p class="st-talk-desc"><strong>This talk gives leadership teams the diagnostic they've never had</strong>: a way to see their unconscious complexity clearly, for the first time. The Fog Index makes visible what effort has been hiding. Grounded in Decision Fatigue research, McKinsey's complexity cost data, and Ashby's Law.</p>
+          <div class="st-talk-penny">
+            <div class="st-talk-penny-label">The penny drop</div>
+            <div class="st-talk-penny-text">&ldquo;We've been measuring effort, not output. And we've been confusing the two.&rdquo;</div>
+          </div>
+        </div>
+        <div class="st-talk-sidebar">
+          <div class="st-meta-block">
+            <div class="st-meta-label">Formats</div>
+            <div class="st-format-row"><span class="st-format-name">Keynote</span><span class="st-format-val">45 min</span></div>
+            <div class="st-format-row"><span class="st-format-name">With Q&amp;A</span><span class="st-format-val">60 min</span></div>
+            <div class="st-format-row"><span class="st-format-name">C-suite workshop</span><span class="st-format-val">Half-day</span></div>
+          </div>
+          <div class="st-meta-block">
+            <div class="st-meta-label">Ideal for</div>
+            <div class="st-audience-item">CEO and C-suite audiences</div>
+            <div class="st-audience-item">Board strategy sessions</div>
+            <div class="st-audience-item">Strategy and transformation conferences</div>
+            <div class="st-audience-item">Executive leadership summits</div>
+          </div>
+          <div class="st-talk-cta"><a href="contact.html">Book this talk &rarr;</a></div>
+        </div>
+      </div>
     </div>
   </div>
 </article>
 
-<article class="topic-entry reveal" id="topic-05">
-  <div class="topic-entry-header">
-    <div class="topic-entry-num-cell" aria-hidden="true"><div class="topic-entry-num">05</div></div>
-    <div class="topic-entry-title-cell">
-      <div class="topic-tag-row"><span class="topic-tag">Executive teams</span><span class="topic-tag">Strategy conferences</span><span class="topic-tag">60 min</span></div>
-      <h2 class="topic-name">The Cost of <em>Complexity</em></h2>
-      <div class="topic-subtitle">What unconscious complexity is actually taking from your organisation</div>
-    </div>
-  </div>
-  <div class="topic-entry-body">
-    <div class="topic-body-left">
-      <p class="topic-desc">Complexity has a price. Leaders know it intuitively &mdash; the exhaustion, the drag, the decisions that take too long, the talent that quietly leaves. But they've never been able to name it precisely.</p>
-      <p class="topic-desc"><strong>This talk names it.</strong> Using original research and a universally human moment, Will Turner shows executive teams exactly what unconscious complexity is costing them &mdash; and why they've been paying it without knowing. For strategy conferences where the room is ready to stop describing the problem and start seeing it clearly.</p>
-      <div class="topic-penny"><div class="topic-penny-label">The penny drop</div><div class="topic-penny-text">&ldquo;We created this. And we didn't know we were doing it.&rdquo;</div></div>
-    </div>
-    <div class="topic-body-right">
-      <div><div class="topic-sidebar-label">Formats</div><div class="topic-format-list"><div class="topic-format-row"><span class="topic-format-name">Keynote</span><span class="topic-format-val">60 min</span></div><div class="topic-format-row"><span class="topic-format-name">Workshop</span><span class="topic-format-val">90 min</span></div></div></div>
-      <div><div class="topic-sidebar-label">Ideal for</div><div class="topic-audience-list"><div class="topic-audience-item">Executive team conferences</div><div class="topic-audience-item">Strategy and transformation events</div><div class="topic-audience-item">Financial services leadership</div><div class="topic-audience-item">Any industry dealing with scale complexity</div></div></div>
-      <div class="topic-cta"><a href="contact.html">Book this talk &rarr;</a></div>
-    </div>
-  </div>
-</article>
-
-<article class="topic-entry reveal" id="topic-06">
-  <div class="topic-entry-header">
-    <div class="topic-entry-num-cell" aria-hidden="true"><div class="topic-entry-num">06</div></div>
-    <div class="topic-entry-title-cell">
-      <div class="topic-tag-row"><span class="topic-tag">Leadership development</span><span class="topic-tag">High-performance</span><span class="topic-tag">45&ndash;60 min</span></div>
-      <h2 class="topic-name"><em>Fluent</em> Leadership</h2>
-      <div class="topic-subtitle">What the best leaders do without thinking &mdash; and how they got there</div>
-    </div>
-  </div>
-  <div class="topic-entry-body">
-    <div class="topic-body-left">
-      <p class="topic-desc">The best leaders aren't the ones with the most answers. They're the ones who can find the simple truth in any situation &mdash; instinctively, without effort. <strong>That's not talent. It's a developed capability with a name: Fluent Leadership.</strong></p>
-      <p class="topic-desc">This talk shows leadership audiences what it looks like, why it outperforms every other leadership skill in conditions of complexity, and exactly how it is built. Grounded in Cs&iacute;kszentmih&aacute;lyi's Flow research and the Simplexity Matrix. For leadership development conferences that want more than inspiration &mdash; they want a shift.</p>
-      <div class="topic-penny"><div class="topic-penny-label">The penny drop</div><div class="topic-penny-text">&ldquo;I've been trying to get better at simplifying. I should have been trying to make it automatic.&rdquo;</div></div>
-    </div>
-    <div class="topic-body-right">
-      <div><div class="topic-sidebar-label">Formats</div><div class="topic-format-list"><div class="topic-format-row"><span class="topic-format-name">Keynote</span><span class="topic-format-val">45 min</span></div><div class="topic-format-row"><span class="topic-format-name">With Q&amp;A</span><span class="topic-format-val">60 min</span></div><div class="topic-format-row"><span class="topic-format-name">Workshop</span><span class="topic-format-val">Half-day</span></div></div></div>
-      <div><div class="topic-sidebar-label">Ideal for</div><div class="topic-audience-list"><div class="topic-audience-item">Leadership development conferences</div><div class="topic-audience-item">High-performance team events</div><div class="topic-audience-item">Senior leader forums</div><div class="topic-audience-item">Executive education programmes</div></div></div>
-      <div class="topic-cta"><a href="contact.html">Book this talk &rarr;</a></div>
+<!-- ═══════════════════════════════════════════
+     05
+═══════════════════════════════════════════ -->
+<article class="st-talk reveal" id="topic-05">
+  <div class="st-talk-inner">
+    <div class="st-talk-num" aria-hidden="true">05</div>
+    <div class="st-talk-content">
+      <div class="st-talk-eyebrow">
+        <span class="st-tag">Executive teams</span>
+        <span class="st-tag">Strategy conferences</span>
+        <span class="st-tag">60 min</span>
+      </div>
+      <h2 class="st-talk-name">The Cost of <em>Complexity</em></h2>
+      <div class="st-talk-sub">What unconscious complexity is actually taking from your organisation</div>
+      <div class="st-talk-grid">
+        <div>
+          <p class="st-talk-desc">Complexity has a price. Leaders know it intuitively &mdash; the exhaustion, the drag, the decisions that take too long, the talent that quietly leaves. But they've never been able to name it precisely.</p>
+          <p class="st-talk-desc"><strong>This talk names it.</strong> Using original research and a universally human moment, Will Turner shows executive teams exactly what unconscious complexity is costing them &mdash; and why they've been paying it without knowing.</p>
+          <div class="st-talk-penny">
+            <div class="st-talk-penny-label">The penny drop</div>
+            <div class="st-talk-penny-text">&ldquo;We created this. And we didn't know we were doing it.&rdquo;</div>
+          </div>
+        </div>
+        <div class="st-talk-sidebar">
+          <div class="st-meta-block">
+            <div class="st-meta-label">Formats</div>
+            <div class="st-format-row"><span class="st-format-name">Keynote</span><span class="st-format-val">60 min</span></div>
+            <div class="st-format-row"><span class="st-format-name">Workshop</span><span class="st-format-val">90 min</span></div>
+          </div>
+          <div class="st-meta-block">
+            <div class="st-meta-label">Ideal for</div>
+            <div class="st-audience-item">Executive team conferences</div>
+            <div class="st-audience-item">Strategy and transformation events</div>
+            <div class="st-audience-item">Financial services leadership</div>
+            <div class="st-audience-item">Any industry with scale complexity</div>
+          </div>
+          <div class="st-talk-cta"><a href="contact.html">Book this talk &rarr;</a></div>
+        </div>
+      </div>
     </div>
   </div>
 </article>
 
-<article class="topic-entry reveal" id="topic-07">
-  <div class="topic-entry-header">
-    <div class="topic-entry-num-cell" aria-hidden="true"><div class="topic-entry-num">07</div></div>
-    <div class="topic-entry-title-cell">
-      <div class="topic-tag-row"><span class="topic-tag">HR &amp; people culture</span><span class="topic-tag">OD conferences</span><span class="topic-tag">45&ndash;60 min</span></div>
-      <h2 class="topic-name">The <em>Penny Drop</em> Culture</h2>
-      <div class="topic-subtitle">How the best organisations make clarity the norm &mdash; not the exception</div>
-    </div>
-  </div>
-  <div class="topic-entry-body">
-    <div class="topic-body-left">
-      <p class="topic-desc">The Penny Drop isn't just a personal event &mdash; it's a cultural one. In most organisations, <strong>complexity is quietly rewarded and clarity is quietly penalised.</strong> The result: a culture designed &mdash; without awareness &mdash; to preserve the Fog.</p>
-      <p class="topic-desc">This talk shows HR and culture leaders what a Penny Drop Culture looks like, what it costs to operate without one, and what it takes to build it deliberately. For people &amp; culture conferences where the room is ready to name what's actually going on.</p>
-      <div class="topic-penny"><div class="topic-penny-label">The penny drop</div><div class="topic-penny-text">&ldquo;We've been rewarding complexity and calling it thoroughness.&rdquo;</div></div>
-    </div>
-    <div class="topic-body-right">
-      <div><div class="topic-sidebar-label">Formats</div><div class="topic-format-list"><div class="topic-format-row"><span class="topic-format-name">Keynote</span><span class="topic-format-val">45 min</span></div><div class="topic-format-row"><span class="topic-format-name">With Q&amp;A</span><span class="topic-format-val">60 min</span></div><div class="topic-format-row"><span class="topic-format-name">Culture workshop</span><span class="topic-format-val">Half-day</span></div></div></div>
-      <div><div class="topic-sidebar-label">Ideal for</div><div class="topic-audience-list"><div class="topic-audience-item">HR and people &amp; culture conferences</div><div class="topic-audience-item">Organisational development events</div><div class="topic-audience-item">CHRO and CPO forums</div><div class="topic-audience-item">Transformation and change conferences</div></div></div>
-      <div class="topic-cta"><a href="contact.html">Book this talk &rarr;</a></div>
+<!-- ═══════════════════════════════════════════
+     06
+═══════════════════════════════════════════ -->
+<article class="st-talk reveal" id="topic-06">
+  <div class="st-talk-inner">
+    <div class="st-talk-num" aria-hidden="true">06</div>
+    <div class="st-talk-content">
+      <div class="st-talk-eyebrow">
+        <span class="st-tag">Leadership development</span>
+        <span class="st-tag">High-performance</span>
+        <span class="st-tag">45&ndash;60 min</span>
+      </div>
+      <h2 class="st-talk-name"><em>Fluent</em> Leadership</h2>
+      <div class="st-talk-sub">What the best leaders do without thinking &mdash; and how they got there</div>
+      <div class="st-talk-grid">
+        <div>
+          <p class="st-talk-desc">The best leaders aren't the ones with the most answers. They're the ones who can find the simple truth in any situation &mdash; instinctively, without effort. <strong>That's not talent. It's a developed capability with a name: Fluent Leadership.</strong></p>
+          <p class="st-talk-desc">This talk shows leadership audiences what it looks like, why it outperforms every other leadership skill in conditions of complexity, and exactly how it is built. Grounded in Cs&iacute;kszentmih&aacute;lyi's Flow research and the Simplexity Matrix.</p>
+          <div class="st-talk-penny">
+            <div class="st-talk-penny-label">The penny drop</div>
+            <div class="st-talk-penny-text">&ldquo;I've been trying to get better at simplifying. I should have been trying to make it automatic.&rdquo;</div>
+          </div>
+        </div>
+        <div class="st-talk-sidebar">
+          <div class="st-meta-block">
+            <div class="st-meta-label">Formats</div>
+            <div class="st-format-row"><span class="st-format-name">Keynote</span><span class="st-format-val">45 min</span></div>
+            <div class="st-format-row"><span class="st-format-name">With Q&amp;A</span><span class="st-format-val">60 min</span></div>
+            <div class="st-format-row"><span class="st-format-name">Workshop</span><span class="st-format-val">Half-day</span></div>
+          </div>
+          <div class="st-meta-block">
+            <div class="st-meta-label">Ideal for</div>
+            <div class="st-audience-item">Leadership development conferences</div>
+            <div class="st-audience-item">High-performance team events</div>
+            <div class="st-audience-item">Senior leader forums</div>
+            <div class="st-audience-item">Executive education programmes</div>
+          </div>
+          <div class="st-talk-cta"><a href="contact.html">Book this talk &rarr;</a></div>
+        </div>
+      </div>
     </div>
   </div>
 </article>
 
+<!-- ═══════════════════════════════════════════
+     07
+═══════════════════════════════════════════ -->
+<article class="st-talk reveal" id="topic-07">
+  <div class="st-talk-inner">
+    <div class="st-talk-num" aria-hidden="true">07</div>
+    <div class="st-talk-content">
+      <div class="st-talk-eyebrow">
+        <span class="st-tag">HR &amp; people culture</span>
+        <span class="st-tag">OD conferences</span>
+        <span class="st-tag">45&ndash;60 min</span>
+      </div>
+      <h2 class="st-talk-name">The <em>Penny Drop</em> Culture</h2>
+      <div class="st-talk-sub">How the best organisations make clarity the norm &mdash; not the exception</div>
+      <div class="st-talk-grid">
+        <div>
+          <p class="st-talk-desc">The Penny Drop isn't just a personal event &mdash; it's a cultural one. In most organisations, <strong>complexity is quietly rewarded and clarity is quietly penalised.</strong> The result: a culture designed &mdash; without awareness &mdash; to preserve the Fog.</p>
+          <p class="st-talk-desc">This talk shows HR and culture leaders what a Penny Drop Culture looks like, what it costs to operate without one, and what it takes to build it deliberately.</p>
+          <div class="st-talk-penny">
+            <div class="st-talk-penny-label">The penny drop</div>
+            <div class="st-talk-penny-text">&ldquo;We've been rewarding complexity and calling it thoroughness.&rdquo;</div>
+          </div>
+        </div>
+        <div class="st-talk-sidebar">
+          <div class="st-meta-block">
+            <div class="st-meta-label">Formats</div>
+            <div class="st-format-row"><span class="st-format-name">Keynote</span><span class="st-format-val">45 min</span></div>
+            <div class="st-format-row"><span class="st-format-name">With Q&amp;A</span><span class="st-format-val">60 min</span></div>
+            <div class="st-format-row"><span class="st-format-name">Culture workshop</span><span class="st-format-val">Half-day</span></div>
+          </div>
+          <div class="st-meta-block">
+            <div class="st-meta-label">Ideal for</div>
+            <div class="st-audience-item">HR and people &amp; culture conferences</div>
+            <div class="st-audience-item">Organisational development events</div>
+            <div class="st-audience-item">CHRO and CPO forums</div>
+            <div class="st-audience-item">Transformation and change conferences</div>
+          </div>
+          <div class="st-talk-cta"><a href="contact.html">Book this talk &rarr;</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ═══ CTA ═══ -->
 <div class="cta-band">
   <h2 class="cta-headline">Ready to book<br><em>Will to speak?</em></h2>
   <p class="cta-sub">Tell Will about your event &mdash; audience, theme, format, date &mdash; and he'll come back to you directly.</p>
@@ -372,15 +862,15 @@
       { "@type": "ListItem", "position": 2, "item": { "@type": "Service", "name": "The Clarity Advantage keynote", "alternateName": ["clarity keynote", "leadership communication keynote"], "description": "Why great leaders don't have a communication problem — they have a thinking one.", "provider": { "@id": "https://willturner.au/#will" }, "url": "https://willturner.au/speaking-topics#topic-02" } },
       { "@type": "ListItem", "position": 3, "item": { "@type": "Service", "name": "The Human in the Room keynote", "alternateName": ["human-centred leadership keynote", "customer experience keynote"], "description": "Every unsolvable business problem has a human being at its centre. Finding that person is always the fastest path to the penny drop.", "provider": { "@id": "https://willturner.au/#will" }, "url": "https://willturner.au/speaking-topics#topic-03" } },
       { "@type": "ListItem", "position": 4, "item": { "@type": "Service", "name": "The Fog Index keynote", "alternateName": ["complexity cost keynote", "C-suite complexity keynote", "measuring unconscious complexity"], "description": "Gives leadership teams the diagnostic they have never had — a way to see their unconscious complexity clearly.", "provider": { "@id": "https://willturner.au/#will" }, "url": "https://willturner.au/speaking-topics#topic-04" } },
-      { "@type": "ListItem", "position": 5, "item": { "@type": "Service", "name": "The Cost of Complexity keynote", "alternateName": ["organisational complexity keynote", "what complexity costs leadership"], "description": "Names precisely what unconscious complexity is costing organisations — the exhaustion, drag, slow decisions, talent that quietly leaves.", "provider": { "@id": "https://willturner.au/#will" }, "url": "https://willturner.au/speaking-topics#topic-05" } },
-      { "@type": "ListItem", "position": 6, "item": { "@type": "Service", "name": "Fluent Leadership keynote", "alternateName": ["high performance leadership keynote", "instinctive clarity keynote"], "description": "What the best leaders do without thinking — and how they got there. The developed capability behind instinctive clarity.", "provider": { "@id": "https://willturner.au/#will" }, "url": "https://willturner.au/speaking-topics#topic-06" } },
-      { "@type": "ListItem", "position": 7, "item": { "@type": "Service", "name": "The Penny Drop Culture keynote", "alternateName": ["organisational culture keynote", "clarity culture keynote", "HR conference keynote complexity"], "description": "In most organisations, complexity is quietly rewarded and clarity is quietly penalised. Shows HR and culture leaders what a Penny Drop Culture looks like.", "provider": { "@id": "https://willturner.au/#will" }, "url": "https://willturner.au/speaking-topics#topic-07" } }
+      { "@type": "ListItem", "position": 5, "item": { "@type": "Service", "name": "The Cost of Complexity keynote", "alternateName": ["organisational complexity keynote", "what complexity costs leadership"], "description": "Names precisely what unconscious complexity is costing organisations.", "provider": { "@id": "https://willturner.au/#will" }, "url": "https://willturner.au/speaking-topics#topic-05" } },
+      { "@type": "ListItem", "position": 6, "item": { "@type": "Service", "name": "Fluent Leadership keynote", "alternateName": ["high performance leadership keynote", "instinctive clarity keynote"], "description": "What the best leaders do without thinking — and how they got there.", "provider": { "@id": "https://willturner.au/#will" }, "url": "https://willturner.au/speaking-topics#topic-06" } },
+      { "@type": "ListItem", "position": 7, "item": { "@type": "Service", "name": "The Penny Drop Culture keynote", "alternateName": ["organisational culture keynote", "clarity culture keynote", "HR conference keynote complexity"], "description": "In most organisations, complexity is quietly rewarded and clarity is quietly penalised.", "provider": { "@id": "https://willturner.au/#will" }, "url": "https://willturner.au/speaking-topics#topic-07" } }
     ] },
     { "@type": "FAQPage", "mainEntity": [
       { "@type": "Question", "name": "What keynote topics does Will Turner speak on?", "acceptedAnswer": { "@type": "Answer", "text": "Will Turner has seven keynote topics built on the Simplexity framework: Simplexity (flagship), The Clarity Advantage, The Human in the Room, The Fog Index, The Cost of Complexity, Fluent Leadership, and The Penny Drop Culture." } },
       { "@type": "Question", "name": "What is Will Turner's most popular keynote topic?", "acceptedAnswer": { "@type": "Answer", "text": "Will Turner's flagship keynote is called Simplexity. It shows leadership audiences precisely how they are creating unconscious complexity without knowing it. The penny drop happens live in the room." } },
       { "@type": "Question", "name": "Does Will Turner customise his keynote topics?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Will Turner customises every keynote to the specific challenge the organisation and audience are facing. The Simplexity framework is consistent but the content, examples, and penny drop are shaped around the room." } },
-      { "@type": "Question", "name": "Does Will Turner speak on unconscious complexity?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Unconscious complexity — the complexity leaders create beyond what the situation requires, without knowing they are doing it — is the named enemy at the centre of Will Turner's Simplexity framework. It features in the flagship Simplexity keynote, The Fog Index, and The Cost of Complexity." } },
+      { "@type": "Question", "name": "Does Will Turner speak on unconscious complexity?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Unconscious complexity — the complexity leaders create beyond what the situation requires, without knowing they are doing it — features in the flagship Simplexity keynote, The Fog Index, and The Cost of Complexity." } },
       { "@type": "Question", "name": "What is the penny drop keynote?", "acceptedAnswer": { "@type": "Answer", "text": "The penny drop is the moment unconscious complexity becomes visible and the simple truth becomes impossible to ignore. Will Turner engineers this moment in every keynote. The Penny Drop Culture is also a specific keynote topic for HR and people & culture conferences." } }
     ] }
   ]
