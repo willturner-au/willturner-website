@@ -1073,14 +1073,6 @@
 nav { animation: fadeDown 0.8s ease both; }
 
 /* ============================================================
-   NAV MOBILE
-   ============================================================ */
-.nav-hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:10px; z-index:200; background:none; border:none; }
-.nav-hamburger span { display:block; width:22px; height:1.5px; background:var(--cream); transition:transform .25s,opacity .25s; }
-.nav-overlay { display:none; }
-.nav-mobile-inner { display:none; }
-
-/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media(max-width:1024px) {
@@ -1099,19 +1091,6 @@ nav { animation: fadeDown 0.8s ease both; }
 
 @media(max-width:860px) {
   nav { padding:1.25rem 1.5rem; }
-  .nav-hamburger { display:flex; }
-  .nav-links { display:none!important; }
-  .nav-cta { display:none!important; }
-  .nav-overlay { display:block; position:fixed; inset:0; background:var(--ink); z-index:150; opacity:0; pointer-events:none; transition:opacity .35s; }
-  .nav-overlay.open { opacity:1; pointer-events:all; }
-  .nav-mobile-inner { display:flex; position:fixed; inset:0; z-index:160; flex-direction:column; align-items:center; justify-content:center; gap:2.75rem; opacity:0; pointer-events:none; transition:opacity .3s .05s; }
-  .nav-mobile-inner.open { opacity:1; pointer-events:all; }
-  .nav-mobile-inner a { font-family:'Playfair Display',serif; font-size:28px; font-weight:700; color:var(--cream); text-decoration:none; transition:color .2s; }
-  .nav-mobile-inner a:hover { color:var(--gold); }
-  .nav-mobile-cta { font-family:'DM Sans',sans-serif!important; font-size:12px!important; letter-spacing:.14em; text-transform:uppercase; font-weight:500!important; color:var(--ink)!important; background:var(--gold)!important; padding:.85rem 2.5rem!important; border-radius:2px!important; }
-  .nav-hamburger.open span:nth-child(1) { transform:rotate(45deg) translate(4.5px,4.5px); }
-  .nav-hamburger.open span:nth-child(2) { opacity:0; }
-  .nav-hamburger.open span:nth-child(3) { transform:rotate(-45deg) translate(4.5px,-4.5px); }
 
   .provocation { grid-template-columns:1fr; padding:3rem 1.5rem; gap:2rem; }
   .enemy-section-hp { padding:3rem 1.5rem; }
@@ -1651,26 +1630,12 @@ nav { animation: fadeDown 0.8s ease both; }
     #about-simplexity{padding:3rem 1.5rem!important}
     #about-will{padding:3rem 1.5rem!important}
   }
+  @media(max-width:860px){
+    #about-simplexity{padding:3rem 1.5rem!important}
+    #about-will{padding:3rem 1.5rem!important}
+  }
 </style>
 
-<!-- FOOTER -->
-<div id="site-footer"></div>
-
-<!-- Google Analytics — deferred until after page load -->
-<script>
-  window.addEventListener('load', function(){
-    var s = document.createElement('script');
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-3JH7PQW1F5';
-    s.defer = true;
-    document.head.appendChild(s);
-    s.onload = function(){
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-3JH7PQW1F5');
-    };
-  });
-</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -1713,7 +1678,7 @@ nav { animation: fadeDown 0.8s ease both; }
       "url": "https://willturner.au",
       "email": "will@willturner.au",
       "jobTitle": "Keynote Speaker, Executive Coach, Trusted Advisor, Award-Winning Author",
-      "description": "Will Turner created Simplexity — the discipline of finding the simple human truth inside any complex challenge. He coined the concept of unconscious complexity. Award-winning author. 25+ years working with leaders across Australia, the UK, and Europe.",
+      "description": "Will Turner created Simplexity — the discipline of finding the simple human truth inside any complex challenge. He coined the concept of unconscious complexity. Award-winning author. 25+ years working with leaders across Australia, the UK, and Europe. His forthcoming book, Simplexity: Escaping Unconscious Complexity, arrives Q1 2027.",
       "image": "https://willturner.au/will-turner-headshot.jpg",
       "sameAs": [
         "https://www.wikidata.org/wiki/Q139859323",
@@ -1840,7 +1805,7 @@ nav { animation: fadeDown 0.8s ease both; }
           "name": "Has Will Turner won any awards for his books?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Will Turner's previous book won the Australian Business Book Awards 2023 in two categories — Leadership, and Management & HR — the first title in the award's history to win in two categories in a single year. His forthcoming book, Simplexity: The Simple Truth Inside Everything Complex, is expected Q1 2027."
+            "text": "Yes. Will Turner's previous book won the Australian Business Book Awards 2023 in two categories — Leadership, and Management & HR — the first title in the award's history to win in two categories in a single year. His forthcoming book, Simplexity: Escaping Unconscious Complexity, is expected Q1 2027."
           }
         }
       ]
@@ -1888,7 +1853,7 @@ nav { animation: fadeDown 0.8s ease both; }
           "position": 4,
           "item": {
             "@type": "Book",
-            "name": "Simplexity: The Simple Truth Inside Everything Complex",
+            "name": "Simplexity: Escaping Unconscious Complexity",
             "description": "Will Turner's forthcoming book on unconscious complexity. Arriving Q1 2027.",
             "url": "https://willturner.au/book.html",
             "author": { "@id": "https://willturner.au/#will" }
