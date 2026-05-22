@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thinking — Will Turner | Simplexity | Leadership Clarity Ideas</title>
+<meta name="description" content="Will Turner's ideas on Simplexity, unconscious complexity, and leadership clarity. The premises and penny drops behind the essays — with links to the full pieces on Substack.">
+<link rel="canonical" href="https://willturner.au/thinking">
+<meta property="og:title" content="Thinking — Will Turner | Simplexity">
+<meta property="og:description" content="The ideas behind Simplexity. Essays on unconscious complexity, leadership clarity, and the penny drop. Will Turner's thinking, before it becomes the book.">
+<meta property="og:url" content="https://willturner.au/thinking">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://willturner.au/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Will Turner — Simplexity">
+<meta property="og:locale" content="en_AU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Thinking — Will Turner | Simplexity">
+<meta name="twitter:description" content="The ideas behind Simplexity — before they become the book. Essays on unconscious complexity, leadership clarity, and the penny drop.">
+<meta name="twitter:image" content="https://willturner.au/og-image.jpg">
+<meta name="twitter:site" content="@willturner_au">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="theme-color" content="#0e0d0c">
+<link rel="alternate" hreflang="en-AU" href="https://willturner.au/thinking">
+<link rel="alternate" hreflang="en" href="https://willturner.au/thinking">
+<meta name="geo.region" content="AU-QLD">
+<meta name="geo.placename" content="Brisbane, Queensland, Australia">
+<meta name="author" content="Will Turner">
+<meta name="keywords" content="Will Turner thinking, Simplexity ideas, unconscious complexity essays, leadership clarity writing, penny drop essays, complexity leadership ideas Brisbane">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="fonts/dm-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/dm-sans-300.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/dm-sans-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/playfair-display-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/playfair-display-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/playfair-display-400italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+<style>
+
+/* ─── THINKING HERO ─── */
+.thinking-hero {
+  padding: 10rem 4rem 5rem;
+  border-bottom: 0.5px solid var(--cream-10);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: end;
+}
+.thinking-hero-note {
+  background: rgba(201,169,110,0.05);
+  border: 0.5px solid rgba(201,169,110,0.2);
+  border-radius: 3px;
+  padding: 1.5rem 1.75rem;
+}
+.thinking-hero-note-label { font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; }
+.thinking-hero-note-body { font-size: 15px; color: var(--cream-40); line-height: 1.75; }
+.thinking-hero-note-body strong { color: var(--cream); font-weight: 500; }
+.thinking-hero-note-body a { color: var(--gold); text-decoration: none; border-bottom: 0.5px solid rgba(201,169,110,0.4); transition: border-color 0.2s; }
+.thinking-hero-note-body a:hover { border-color: var(--gold); }
+
+/* ─── IDEAS GRID ─── */
+.ideas-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--cream-10);
+  border-top: 0.5px solid var(--cream-10);
+  border-bottom: 0.5px solid var(--cream-10);
+}
+
+/* ─── IDEA CARD ─── */
+.idea-card {
+  background: var(--ink);
+  padding: 2.75rem 3rem;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  transition: background 0.25s;
+}
+.idea-card:hover { background: #131110; }
+.idea-card-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+.idea-card-num { font-size: 10px; letter-spacing: 0.15em; color: rgba(201,169,110,0.4); }
+.idea-card-date { font-size: 11px; color: var(--cream-20); }
+.idea-card-tag { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; padding: 2px 8px; border-radius: 2px; background: var(--cream-06); color: rgba(201,169,110,0.5); border: 0.5px solid rgba(201,169,110,0.18); margin-left: auto; }
+.idea-card-headline { font-family: 'Playfair Display', serif; font-size: clamp(20px, 2.2vw, 26px); font-weight: 700; color: var(--cream); line-height: 1.2; margin-bottom: 0.75rem; }
+.idea-card-headline em { font-style: italic; color: var(--gold); }
+.idea-card-premise { font-size: 15px; color: var(--cream-40); line-height: 1.75; margin-bottom: 1.5rem; flex: 1; }
+.idea-card-penny { border-left: 2px solid rgba(201,169,110,0.3); padding: 0.75rem 1rem; margin-bottom: 1.5rem; }
+.idea-card-penny-label { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(201,169,110,0.45); margin-bottom: 0.3rem; }
+.idea-card-penny-text { font-family: 'Playfair Display', serif; font-style: italic; font-size: 15px; color: var(--cream-60); line-height: 1.5; }
+.idea-card-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 1.25rem; border-top: 0.5px solid var(--cream-10); }
+.idea-card-read { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); display: inline-flex; align-items: center; gap: 6px; transition: opacity 0.2s; }
+.idea-card:hover .idea-card-read { opacity: 0.7; }
+.idea-card-platform { font-size: 10px; color: var(--cream-20); }
+
+/* ─── FEATURED CARD (full width) ─── */
+.idea-card.featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  background: rgba(201,169,110,0.04);
+  border-top: 0.5px solid rgba(201,169,110,0.15);
+  border-bottom: 0.5px solid rgba(201,169,110,0.15);
+  padding: 3rem 4rem;
+}
+.idea-card.featured .idea-card-content { display: flex; flex-direction: column; }
+.idea-card.featured .idea-card-headline { font-size: clamp(24px, 2.8vw, 34px); }
+.idea-card.featured .idea-card-aside {
+  padding-left: 3rem;
+  border-left: 0.5px solid rgba(201,169,110,0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 3.25rem; /* align with headline after meta row */
+}
+.idea-card-aside-label { font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.25rem; }
+.idea-card-aside-text { font-size: 15px; color: var(--cream-40); line-height: 1.75; }
+
+/* ─── SUBSTACK BRIDGE ─── */
+.thinking-substack {
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 3rem;
+  align-items: center;
+  border-bottom: 0.5px solid var(--cream-10);
+  background: var(--shadow);
+}
+.thinking-substack-label { font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+.thinking-substack-headline { font-family: 'Playfair Display', serif; font-size: clamp(22px, 2.5vw, 32px); font-weight: 700; color: var(--cream); line-height: 1.15; margin-bottom: 0.6rem; }
+.thinking-substack-headline em { font-style: italic; color: var(--gold); }
+.thinking-substack-body { font-size: 15px; color: var(--cream-40); line-height: 1.75; max-width: 560px; }
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:860px) {
+  .thinking-hero { grid-template-columns: 1fr; padding: 8rem 1.5rem 3rem; gap: 2rem; }
+  .ideas-grid { grid-template-columns: 1fr; }
+  .idea-card.featured { grid-template-columns: 1fr; gap: 0; padding: 2.5rem 1.5rem; }
+  .idea-card.featured .idea-card-aside { padding-left: 0; border-left: none; border-top: 0.5px solid rgba(201,169,110,0.18); padding-top: 1.5rem; margin-top: 1.5rem; }
+  .idea-card { padding: 2rem 1.5rem; }
+  .thinking-substack { grid-template-columns: 1fr; padding: 3rem 1.5rem; gap: 1.5rem; }
+}
+@media(max-width:560px) {
+  .thinking-hero { padding: 7rem 1.25rem 2.5rem; }
+  .idea-card, .idea-card.featured { padding: 1.75rem 1.25rem; }
+  .thinking-substack { padding: 2.5rem 1.25rem; }
+}
+</style>
+<link rel="alternate" type="text/plain" title="AI-readable summary" href="https://willturner.au/llms.txt">
+</head>
+<body>
+<div id="site-nav"></div>
+
+<!-- HERO -->
+<section class="thinking-hero reveal">
+  <div>
+    <div class="page-eyebrow">Thinking</div>
+    <h1 class="page-headline">The ideas before<br><em>the stage.</em></h1>
+    <p class="page-sub">Every keynote, coaching session, and page of the book starts here &mdash; as a thought that needed testing. This is where Will Turner thinks out loud about Simplexity, unconscious complexity, and what it actually takes to lead with clarity.</p>
+  </div>
+  <div class="thinking-hero-note">
+    <div class="thinking-hero-note-label">How this works</div>
+    <p class="thinking-hero-note-body">Each piece here is a condensed version of an idea &mdash; the premise and the penny drop. <strong>The full essay lives on Substack.</strong> Read the idea here. Go deeper at <a href="https://willturnersimplexity.substack.com" target="_blank" rel="noopener">willturnersimplexity.substack.com</a>.</p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     IDEAS GRID
+     ────────────────────────────────────────────────────────
+     HOW TO ADD A NEW IDEA:
+     1. Copy the standard .idea-card block
+     2. Update: data-num, date, tag, headline, premise, penny drop, and the href on both the card and the "Read on Substack" link
+     3. Paste the Substack post URL into both hrefs
+     4. To make it the featured card (full width): add class="idea-card featured", wrap content in .idea-card-content div, add .idea-card-aside div alongside it
+     5. Update sitemap.xml lastmod date for /thinking after each addition
+     ════════════════════════════════════════════════════════ -->
+<div class="ideas-grid">
+
+  <!-- FEATURED — most recent, full width -->
+  <a href="https://willturnersimplexity.substack.com" target="_blank" rel="noopener" class="idea-card featured reveal">
+    <div class="idea-card-content">
+      <div class="idea-card-meta">
+        <span class="idea-card-num">001</span>
+        <span class="idea-card-date">May 2026</span>
+        <span class="idea-card-tag">Unconscious Complexity</span>
+      </div>
+      <h2 class="idea-card-headline">The meeting that justifies <em>itself.</em></h2>
+      <p class="idea-card-premise">There is a meeting in your calendar that nobody called because it was needed. It was called because the last meeting raised something that couldn't be resolved, so a follow-up was scheduled. That follow-up raised three more things. Each one now has its own meeting. Nobody questioned it. That's unconscious complexity &mdash; the complexity leaders create beyond what the situation requires, without knowing they're doing it.</p>
+      <div class="idea-card-penny">
+        <div class="idea-card-penny-label">The penny drop</div>
+        <div class="idea-card-penny-text">The meeting isn't solving a problem. It is the problem. And you called it.</div>
+      </div>
+      <div class="idea-card-footer">
+        <span class="idea-card-read">Read the full essay &rarr;</span>
+        <span class="idea-card-platform">Substack</span>
+      </div>
+    </div>
+    <div class="idea-card-aside">
+      <div>
+        <div class="idea-card-aside-label">Why this matters</div>
+        <p class="idea-card-aside-text">Unconscious complexity doesn't announce itself. It accumulates &mdash; layer by layer, meeting by meeting &mdash; until the organisation is heavier than the problem it's trying to solve.</p>
+      </div>
+      <div>
+        <div class="idea-card-aside-label">The science</div>
+        <p class="idea-card-aside-text">Kahneman's WYSIATI &mdash; What You See Is All There Is. System 1 has normalised the complexity so completely that it no longer registers as a choice. That's what makes it unconscious.</p>
+      </div>
+      <div>
+        <div class="idea-card-aside-label">The question</div>
+        <p class="idea-card-aside-text">Which meeting in your calendar this week was called because a previous meeting couldn't resolve something? Is scheduling another meeting the right response &mdash; or is that the unconscious complexity?</p>
+      </div>
+    </div>
+  </a>
+
+  <!-- CARD 002 -->
+  <a href="https://willturnersimplexity.substack.com" target="_blank" rel="noopener" class="idea-card reveal">
+    <div class="idea-card-meta">
+      <span class="idea-card-num">002</span>
+      <span class="idea-card-date">May 2026</span>
+      <span class="idea-card-tag">The Penny Drop</span>
+    </div>
+    <h2 class="idea-card-headline">Recognition, not <em>revelation.</em></h2>
+    <p class="idea-card-premise">The penny drop isn't new information. It's remembering something true that you lost access to. This is why it lands so hard &mdash; and why it lasts. Revelation is fragile. Recognition is not. You can't unfeel something you've already known.</p>
+    <div class="idea-card-penny">
+      <div class="idea-card-penny-label">The penny drop</div>
+      <div class="idea-card-penny-text">You already knew this. Will just showed you where to look.</div>
+    </div>
+    <div class="idea-card-footer">
+      <span class="idea-card-read">Read on Substack &rarr;</span>
+      <span class="idea-card-platform">Substack</span>
+    </div>
+  </a>
+
+  <!-- CARD 003 -->
+  <a href="https://willturnersimplexity.substack.com" target="_blank" rel="noopener" class="idea-card reveal">
+    <div class="idea-card-meta">
+      <span class="idea-card-num">003</span>
+      <span class="idea-card-date">May 2026</span>
+      <span class="idea-card-tag">Simplexity</span>
+    </div>
+    <h2 class="idea-card-headline">Simplicity is not the <em>absence</em> of complexity.</h2>
+    <p class="idea-card-premise">The most common mistake: treating simplicity as the opposite of complexity. It isn't. Simplicity is the presence of clarity. You don't achieve it by removing things. You achieve it by understanding them well enough that the unnecessary becomes visible.</p>
+    <div class="idea-card-penny">
+      <div class="idea-card-penny-label">The penny drop</div>
+      <div class="idea-card-penny-text">You don't need less. You need to see more clearly what you actually need.</div>
+    </div>
+    <div class="idea-card-footer">
+      <span class="idea-card-read">Read on Substack &rarr;</span>
+      <span class="idea-card-platform">Substack</span>
+    </div>
+  </a>
+
+</div>
+
+<!-- SUBSTACK BRIDGE -->
+<div class="thinking-substack reveal">
+  <div>
+    <div class="thinking-substack-label">The full essays</div>
+    <h2 class="thinking-substack-headline">These ideas live in full<br>on <em>Substack.</em></h2>
+    <p class="thinking-substack-body">Each card above is the premise and the penny drop. The full essay &mdash; the science, the story, the implication &mdash; is on Substack. Subscribe there and every new idea comes straight to your inbox.</p>
+  </div>
+  <div>
+    <a href="https://willturnersimplexity.substack.com" target="_blank" rel="noopener" class="btn-primary">Read the full essays &rarr;</a>
+  </div>
+</div>
+
+<!-- EMAIL CAPTURE -->
+<div class="email-capture reveal">
+  <div class="email-capture-text">
+    <div class="email-capture-label">Ideas before the stage</div>
+    <div class="email-capture-headline">The thinking behind<br><em>the book.</em></div>
+    <p class="email-capture-sub">Join the leaders following Will's ideas as they develop. No noise. Just the thinking.</p>
+  </div>
+  <form class="email-capture-form" id="thinking-email-form">
+    <input type="email" class="email-capture-input" placeholder="Your email address" required>
+    <button type="submit" class="email-capture-btn">Follow the thinking</button>
+  </form>
+</div>
+
+<!-- CTA -->
+<div class="cta-band">
+  <h2 class="cta-headline">Ready for<br><em>the penny drop?</em></h2>
+  <p class="cta-sub">The thinking becomes the stage. If you want Will in your room &mdash; start with a conversation.</p>
+  <div class="actions">
+    <a href="contact.html" class="btn-primary">Work with Will</a>
+    <a href="simplexity.html" class="btn-ghost">Explore Simplexity &rarr;</a>
+  </div>
+</div>
+
+<div id="site-pre-footer"></div>
+<div id="site-footer"></div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://willturner.au/" }, { "@type": "ListItem", "position": 2, "name": "Thinking", "item": "https://willturner.au/thinking" }] },
+    { "@type": "WebPage", "@id": "https://willturner.au/thinking#webpage", "url": "https://willturner.au/thinking", "name": "Thinking — Will Turner | Simplexity", "description": "Will Turner's ideas on Simplexity, unconscious complexity, and leadership clarity. Premises and penny drops from each essay, linking to the full pieces on Substack.", "author": { "@id": "https://willturner.au/#will" }, "datePublished": "2026-05-22", "dateModified": "2026-05-22" },
+    { "@type": "Blog", "@id": "https://willturner.au/thinking#blog", "name": "Thinking — Will Turner", "description": "Will Turner's ideas on Simplexity, unconscious complexity, and leadership clarity.", "url": "https://willturner.au/thinking", "author": { "@id": "https://willturner.au/#will" }, "blogPost": [
+      { "@type": "BlogPosting", "headline": "The meeting that justifies itself", "description": "Unconscious complexity — the complexity leaders create beyond what the situation requires, without knowing they're doing it. The meeting is the most common example.", "author": { "@id": "https://willturner.au/#will" }, "datePublished": "2026-05-01", "url": "https://willturnersimplexity.substack.com", "keywords": ["unconscious complexity", "meetings", "Simplexity", "WYSIATI", "Kahneman"] },
+      { "@type": "BlogPosting", "headline": "Recognition, not revelation", "description": "The penny drop isn't new information. It's remembering something true you lost access to. This is why it lands hard — and why it lasts.", "author": { "@id": "https://willturner.au/#will" }, "datePublished": "2026-05-08", "url": "https://willturnersimplexity.substack.com", "keywords": ["penny drop", "Simplexity", "recognition", "leadership clarity"] },
+      { "@type": "BlogPosting", "headline": "Simplicity is not the absence of complexity", "description": "Simplicity is the presence of clarity. You achieve it not by removing things but by understanding them well enough that the unnecessary becomes visible.", "author": { "@id": "https://willturner.au/#will" }, "datePublished": "2026-05-15", "url": "https://willturnersimplexity.substack.com", "keywords": ["Simplexity", "clarity", "simplicity", "complexity", "leadership"] }
+    ] },
+    { "@type": "Person", "@id": "https://willturner.au/#will", "name": "Will Turner", "url": "https://willturner.au", "sameAs": ["https://willturnersimplexity.substack.com", "https://www.linkedin.com/in/willturnersimplexity"] }
+  ]
+}
+</script>
+<script src="main.js" defer></script>
+</body>
+</html>
