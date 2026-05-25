@@ -7,12 +7,12 @@
 
   /* ─── NAV LINKS (single source) ─────────────────────────────── */
   var NAV_LINKS = [
-    { href: 'simplexity.html', label: 'Simplexity' },
-    { href: 'speaking.html',   label: 'Speaking'   },
-    { href: 'coaching.html',   label: 'Coaching'   },
-    { href: 'advisory.html',   label: 'Advisory'   },
-    { href: 'book.html',       label: 'Book'       },
-    { href: 'about.html',      label: 'About'      }
+    { href: 'simplexity', label: 'Simplexity' },
+    { href: 'speaking',   label: 'Speaking'   },
+    { href: 'coaching',   label: 'Coaching'   },
+    { href: 'advisory',   label: 'Advisory'   },
+    { href: 'book',       label: 'Book'       },
+    { href: 'about',      label: 'About'      }
   ];
 
   /* ─── TICKER WORDS (single source) ──────────────────────────── */
@@ -39,10 +39,10 @@
     return node;
   }
 
-  // Normalise current page: root path maps to 'index.html'; Cloudflare strips .html extensions so re-add if missing
+  // Normalise current page: root path maps to 'index'; Cloudflare strips .html extensions
   var rawPage = window.location.pathname.split('/').pop();
-  var currentPage = (rawPage === '' || rawPage === undefined) ? 'index.html'
-    : (rawPage.indexOf('.') === -1 ? rawPage + '.html' : rawPage);
+  var currentPage = (rawPage === '' || rawPage === undefined) ? 'index'
+    : rawPage.replace(/\.html$/, '');
 
   /* ─── 1. INJECT NAV ─────────────────────────────────────────── */
   var navEl = document.getElementById('site-nav');
@@ -59,15 +59,15 @@
 
     navEl.outerHTML = [
       '<nav>',
-      '  <a href="index.html" class="nav-logo"><span class="logo-will">Will</span><span class="logo-turner"> Turner</span></a>',
+      '  <a href="/" class="nav-logo"><span class="logo-will">Will</span><span class="logo-turner"> Turner</span></a>',
       '  <ul class="nav-links">' + liItems + '</ul>',
-      '  <a href="contact.html" class="nav-cta' + (currentPage === 'contact.html' ? ' active' : '') + '">Work with Will</a>',
+      '  <a href="contact" class="nav-cta' + (currentPage === 'contact' ? ' active' : '') + '">Work with Will</a>',
       '  <button class="nav-hamburger" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>',
       '</nav>',
       '<div class="nav-overlay" id="navOverlay"></div>',
       '<div class="nav-mobile-inner" id="navMobile">',
       mobileLinks,
-      '  <a href="contact.html" class="nav-mobile-cta">Work with Will</a>',
+      '  <a href="contact" class="nav-mobile-cta">Work with Will</a>',
       '</div>'
     ].join('\n');
 
@@ -117,9 +117,9 @@
       '    <div class="footer-logo"><span class="logo-will">Will</span><span class="logo-turner"> Turner</span></div>',
       '    <div class="footer-copy">&copy; 2026 Will Turner &mdash; willturner.au</div>',
       '    <div class="footer-nav">',
-      '      <a href="speaking.html">Speaking</a>',
-      '      <a href="about.html">About</a>',
-      '      <a href="contact.html">Contact</a>',
+      '      <a href="speaking">Speaking</a>',
+      '      <a href="about">About</a>',
+      '      <a href="contact">Contact</a>',
       '    </div>',
       '  </div>',
       '  <div class="footer-social-row">' + socialHTML + '</div>',
